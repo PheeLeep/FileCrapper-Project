@@ -19,3 +19,4 @@ FileCrapper contains the following file crapping methods:
 FileCrapper must be run on Windows Vista and above, with .NET Framework 4.8 installed.
 
 ## License
+[MIT License](https://github.com/PheeLeep/FileCrapper-Project/blob/master/LICENSE)
