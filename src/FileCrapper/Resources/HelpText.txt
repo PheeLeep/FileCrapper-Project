@@ -1,6 +1,7 @@
 How to start file crapping?
 
 1. Click Add File/s or Add Folder to select an object you want.
+   (or drag and drop to the list.)
 2. Go to Options, and select the crap methods, chance of damage and number of rounds.
 3. Click 'Start Crapping' (explosion icon), and confirm the dialog.
 4. Done!
