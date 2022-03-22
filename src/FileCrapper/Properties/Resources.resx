@@ -133,8 +133,8 @@
   <data name="HelpText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HelpText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="DisclaimerText" xml:space="preserve">
-    <value>This program literally destroys the files. Misusing/Abusing this program for your personal agenda, might damage important files. (or worse, the computer might not boot anymore, if you destroy system files.)</value>
+  <data name="AdminModeDisclaimer" xml:space="preserve">
+    <value>When you're in admin mode, you're allowed to select and crap files from some restricted folder/s. However, this can lead to undesirable effects, especially your computer if you crap its critical files (like drivers), that can cause your computer to not boot anymore and the like.</value>
   </data>
   <data name="SettingsImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingsImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,16 +142,25 @@
   <data name="AddFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddFolder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddFolder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="InAdminModeWarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InAdminModeWarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DisclaimerText" xml:space="preserve">
+    <value>This program literally destroys the files. Misusing/Abusing this program for your personal agenda, might damage important files. (or worse, the computer might not boot anymore, if you destroy system files.)</value>
   </data>
   <data name="AddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="InAdminModeWarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InAdminModeWarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddFolder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFolder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AdminModeDisclaimer" xml:space="preserve">
-    <value>When you're in admin mode, you're allowed to select and crap files from some restricted folder/s. However, this can lead to undesirable effects, especially your computer if you crap its critical files (like drivers), that can cause your computer to not boot anymore and the like.</value>
+  <data name="DeleteAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SelectAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SelectAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

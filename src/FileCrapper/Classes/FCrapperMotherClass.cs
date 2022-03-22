@@ -107,7 +107,7 @@ namespace FileCrapper.Classes {
 
             Task.Run(() => {
                 foreach (ListViewItem lvi in items) {
-                    FCrapperObject obj = _objects.Find((objF) => objF.Path == lvi.SubItems[2].Text);
+                    FCrapperObject obj = _objects.Find((objF) => objF.Path == lvi.SubItems[1].Text);
                     if (obj != null) {
                         obj.Dispose();
                         _objects.Remove(obj);

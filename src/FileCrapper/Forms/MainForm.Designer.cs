@@ -57,6 +57,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.AddFilesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AddFolderToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.CheckAllToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.RemoveCheckedItemsToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.RemoveAllItemsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.StartCrapToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -80,6 +84,7 @@
             this.columnHeader3});
             this.lvFiles.ContextMenuStrip = this.listViewContextMenu;
             this.lvFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvFiles.FullRowSelect = true;
             this.lvFiles.HideSelection = false;
             this.lvFiles.Location = new System.Drawing.Point(3, 18);
             this.lvFiles.Name = "lvFiles";
@@ -162,11 +167,11 @@
             this.NoFilesLabel.AllowDrop = true;
             this.NoFilesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NoFilesLabel.BackColor = System.Drawing.Color.White;
-            this.NoFilesLabel.Location = new System.Drawing.Point(68, 133);
+            this.NoFilesLabel.Location = new System.Drawing.Point(68, 104);
             this.NoFilesLabel.Name = "NoFilesLabel";
-            this.NoFilesLabel.Size = new System.Drawing.Size(303, 59);
+            this.NoFilesLabel.Size = new System.Drawing.Size(303, 129);
             this.NoFilesLabel.TabIndex = 1;
-            this.NoFilesLabel.Text = "Add objects here by drag and drop, or by clicking \'Add File/s\' or \'Add Folder\'";
+            this.NoFilesLabel.Text = resources.GetString("NoFilesLabel.Text");
             this.NoFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NoFilesLabel.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvFiles_DragDrop);
             this.NoFilesLabel.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvFiles_DragEnter);
@@ -224,7 +229,7 @@
             this.toolStripSeparator3,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // addFilesToolStripMenuItem
@@ -279,7 +284,7 @@
             this.disclaimerToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem1
@@ -326,6 +331,10 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddFilesToolStripButton,
             this.AddFolderToolStripButton,
+            this.toolStripSeparator8,
+            this.CheckAllToolStripButton,
+            this.RemoveCheckedItemsToolStripButton,
+            this.RemoveAllItemsToolStripButton,
             this.toolStripSeparator5,
             this.StartCrapToolStripButton,
             this.toolStripSeparator6,
@@ -343,7 +352,7 @@
             this.AddFilesToolStripButton.Image = global::FileCrapper.Properties.Resources.AddFile;
             this.AddFilesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddFilesToolStripButton.Name = "AddFilesToolStripButton";
-            this.AddFilesToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.AddFilesToolStripButton.Size = new System.Drawing.Size(29, 28);
             this.AddFilesToolStripButton.Text = "Add File/s";
             this.AddFilesToolStripButton.Click += new System.EventHandler(this.AddFilesToolStripButton_Click);
             // 
@@ -357,10 +366,45 @@
             this.AddFolderToolStripButton.Text = "Add Folder";
             this.AddFolderToolStripButton.Click += new System.EventHandler(this.AddFolderToolStripButton_Click);
             // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            // 
+            // CheckAllToolStripButton
+            // 
+            this.CheckAllToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CheckAllToolStripButton.Image = global::FileCrapper.Properties.Resources.SelectAll;
+            this.CheckAllToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CheckAllToolStripButton.Name = "CheckAllToolStripButton";
+            this.CheckAllToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.CheckAllToolStripButton.Text = "Check All";
+            this.CheckAllToolStripButton.Click += new System.EventHandler(this.CheckAllToolStripMenuItem_Click);
+            // 
+            // RemoveCheckedItemsToolStripButton
+            // 
+            this.RemoveCheckedItemsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RemoveCheckedItemsToolStripButton.Image = global::FileCrapper.Properties.Resources.DeleteSelected;
+            this.RemoveCheckedItemsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveCheckedItemsToolStripButton.Name = "RemoveCheckedItemsToolStripButton";
+            this.RemoveCheckedItemsToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.RemoveCheckedItemsToolStripButton.Text = "Remove Checked Item/s.";
+            this.RemoveCheckedItemsToolStripButton.Click += new System.EventHandler(this.RemoveCheckedItemsToolStripMenuItem_Click);
+            // 
+            // RemoveAllItemsToolStripButton
+            // 
+            this.RemoveAllItemsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RemoveAllItemsToolStripButton.Image = global::FileCrapper.Properties.Resources.DeleteAll;
+            this.RemoveAllItemsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveAllItemsToolStripButton.Name = "RemoveAllItemsToolStripButton";
+            this.RemoveAllItemsToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.RemoveAllItemsToolStripButton.Text = "Remove All Item/s";
+            this.RemoveAllItemsToolStripButton.Click += new System.EventHandler(this.RemoveAllItemsToolStripMenuItem_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // StartCrapToolStripButton
             // 
@@ -368,14 +412,14 @@
             this.StartCrapToolStripButton.Image = global::FileCrapper.Properties.Resources.CrapItems;
             this.StartCrapToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.StartCrapToolStripButton.Name = "StartCrapToolStripButton";
-            this.StartCrapToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.StartCrapToolStripButton.Size = new System.Drawing.Size(29, 28);
             this.StartCrapToolStripButton.Text = "Start Crapping";
             this.StartCrapToolStripButton.Click += new System.EventHandler(this.StartCrapToolStripButton_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // OptionsToolStripButton
             // 
@@ -383,7 +427,7 @@
             this.OptionsToolStripButton.Image = global::FileCrapper.Properties.Resources.SettingsImage;
             this.OptionsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OptionsToolStripButton.Name = "OptionsToolStripButton";
-            this.OptionsToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.OptionsToolStripButton.Size = new System.Drawing.Size(29, 28);
             this.OptionsToolStripButton.Text = "Options";
             this.OptionsToolStripButton.Click += new System.EventHandler(this.SettingsToolStripButton_Click);
             // 
@@ -393,7 +437,7 @@
             this.AdminModeWarnToolStripButton.Image = global::FileCrapper.Properties.Resources.InAdminModeWarn;
             this.AdminModeWarnToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AdminModeWarnToolStripButton.Name = "AdminModeWarnToolStripButton";
-            this.AdminModeWarnToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.AdminModeWarnToolStripButton.Size = new System.Drawing.Size(29, 28);
             this.AdminModeWarnToolStripButton.Text = "Admin Mode Warning";
             this.AdminModeWarnToolStripButton.Visible = false;
             this.AdminModeWarnToolStripButton.Click += new System.EventHandler(this.AdminModeWarnToolStripButton_Click);
@@ -480,6 +524,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripStatusLabel AdminModeWarnToolStripLabel;
         private System.Windows.Forms.Label NoFilesLabel;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton CheckAllToolStripButton;
+        private System.Windows.Forms.ToolStripButton RemoveCheckedItemsToolStripButton;
+        private System.Windows.Forms.ToolStripButton RemoveAllItemsToolStripButton;
     }
 }
 

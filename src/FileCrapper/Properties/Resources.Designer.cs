@@ -110,6 +110,26 @@ namespace FileCrapper.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteAll {
+            get {
+                object obj = ResourceManager.GetObject("DeleteAll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteSelected {
+            get {
+                object obj = ResourceManager.GetObject("DeleteSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to In this message, you&apos;re agree to hold responsibility of the damage because you use this program. Click Yes if you&apos;re agree, or No if you&apos;re not and the program will close automatically..
         /// </summary>
         internal static string DisclaimerAcknowledge {
@@ -168,6 +188,16 @@ namespace FileCrapper.Properties {
         internal static System.Drawing.Bitmap NewFile {
             get {
                 object obj = ResourceManager.GetObject("NewFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SelectAll {
+            get {
+                object obj = ResourceManager.GetObject("SelectAll", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

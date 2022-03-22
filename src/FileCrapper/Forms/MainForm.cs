@@ -54,6 +54,7 @@ namespace FileCrapper.Forms {
         }
 
         private void CheckAllToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (motherClass.Count == 0) return;
             lvFiles.BeginUpdate();
             foreach (ListViewItem item in lvFiles.Items)
                 item.Checked = true;
@@ -61,6 +62,7 @@ namespace FileCrapper.Forms {
         }
 
         private void UncheckAllToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (motherClass.Count == 0) return;
             lvFiles.BeginUpdate();
             foreach (ListViewItem item in lvFiles.Items)
                 item.Checked = false;
@@ -68,10 +70,12 @@ namespace FileCrapper.Forms {
         }
 
         private void RemoveCheckedItemsToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (motherClass.Count == 0) return;
             motherClass.RemoveCheckItems();
         }
 
         private void RemoveAllItemsToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (motherClass.Count == 0) return;
             checkAllToolStripMenuItem.PerformClick();
             motherClass.RemoveCheckItems();
         }
