@@ -67,38 +67,39 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "License: (MIT License)";
+            this.label3.Text = "License:";
             // 
             // LicenseLinkLabel
             // 
             this.LicenseLinkLabel.AutoSize = true;
-            this.LicenseLinkLabel.Location = new System.Drawing.Point(173, 132);
+            this.LicenseLinkLabel.Location = new System.Drawing.Point(96, 132);
             this.LicenseLinkLabel.Name = "LicenseLinkLabel";
-            this.LicenseLinkLabel.Size = new System.Drawing.Size(69, 16);
+            this.LicenseLinkLabel.Size = new System.Drawing.Size(80, 16);
             this.LicenseLinkLabel.TabIndex = 4;
             this.LicenseLinkLabel.TabStop = true;
-            this.LicenseLinkLabel.Text = "Click Here";
+            this.LicenseLinkLabel.Text = "MIT License";
+            this.LicenseLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LicenseLinkLabel_LinkClicked);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(27, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 16);
+            this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Website: (GitHub repo)";
+            this.label4.Text = "Website: ";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(173, 110);
+            this.linkLabel1.Location = new System.Drawing.Point(96, 110);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(69, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(85, 16);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click Here";
+            this.linkLabel1.Text = "GitHub Repo";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // AboutDialog
