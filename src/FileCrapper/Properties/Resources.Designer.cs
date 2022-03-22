@@ -91,6 +91,15 @@ namespace FileCrapper.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When you&apos;re in admin mode, you&apos;re allowed to select and crap files from some restricted folder/s. However, this can lead to undesirable effects, especially your computer if you crap its critical files (like drivers), that can cause your computer to not boot anymore and the like..
+        /// </summary>
+        internal static string AdminModeDisclaimer {
+            get {
+                return ResourceManager.GetString("AdminModeDisclaimer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap CrapItems {
@@ -132,6 +141,7 @@ namespace FileCrapper.Properties {
         ///   Looks up a localized string similar to How to start file crapping?
         ///
         ///1. Click Add File/s or Add Folder to select an object you want.
+        ///   (or drag and drop to the list.)
         ///2. Go to Options, and select the crap methods, chance of damage and number of rounds.
         ///3. Click &apos;Start Crapping&apos; (explosion icon), and confirm the dialog.
         ///4. Done!.
@@ -139,6 +149,16 @@ namespace FileCrapper.Properties {
         internal static string HelpText {
             get {
                 return ResourceManager.GetString("HelpText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InAdminModeWarn {
+            get {
+                object obj = ResourceManager.GetObject("InAdminModeWarn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

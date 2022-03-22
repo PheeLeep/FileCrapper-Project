@@ -35,8 +35,11 @@
             this.removeCheckedItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeAllItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NoFilesLabel = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ObjectsStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.AdminModeWarnToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +61,7 @@
             this.StartCrapToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.OptionsToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.AdminModeWarnToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AddFilesDialog = new System.Windows.Forms.OpenFileDialog();
             this.AddFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.listViewContextMenu.SuspendLayout();
@@ -143,6 +147,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.NoFilesLabel);
             this.groupBox1.Controls.Add(this.lvFiles);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 55);
@@ -152,11 +157,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Files and Folders";
             // 
+            // NoFilesLabel
+            // 
+            this.NoFilesLabel.AllowDrop = true;
+            this.NoFilesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NoFilesLabel.BackColor = System.Drawing.Color.White;
+            this.NoFilesLabel.Location = new System.Drawing.Point(68, 133);
+            this.NoFilesLabel.Name = "NoFilesLabel";
+            this.NoFilesLabel.Size = new System.Drawing.Size(303, 59);
+            this.NoFilesLabel.TabIndex = 1;
+            this.NoFilesLabel.Text = "Add objects here by drag and drop, or by clicking \'Add File/s\' or \'Add Folder\'";
+            this.NoFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NoFilesLabel.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvFiles_DragDrop);
+            this.NoFilesLabel.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvFiles_DragEnter);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ObjectsStatusLabel});
+            this.ObjectsStatusLabel,
+            this.toolStripSeparator7,
+            this.AdminModeWarnToolStripLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 378);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(439, 26);
@@ -168,6 +189,18 @@
             this.ObjectsStatusLabel.Name = "ObjectsStatusLabel";
             this.ObjectsStatusLabel.Size = new System.Drawing.Size(78, 20);
             this.ObjectsStatusLabel.Text = "0 object/s.";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 26);
+            // 
+            // AdminModeWarnToolStripLabel
+            // 
+            this.AdminModeWarnToolStripLabel.Name = "AdminModeWarnToolStripLabel";
+            this.AdminModeWarnToolStripLabel.Size = new System.Drawing.Size(249, 20);
+            this.AdminModeWarnToolStripLabel.Text = "Admin Mode! Proceed with Caution!";
+            this.AdminModeWarnToolStripLabel.Visible = false;
             // 
             // mainMenuStrip
             // 
@@ -296,7 +329,8 @@
             this.toolStripSeparator5,
             this.StartCrapToolStripButton,
             this.toolStripSeparator6,
-            this.OptionsToolStripButton});
+            this.OptionsToolStripButton,
+            this.AdminModeWarnToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(439, 27);
@@ -352,6 +386,17 @@
             this.OptionsToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.OptionsToolStripButton.Text = "Options";
             this.OptionsToolStripButton.Click += new System.EventHandler(this.SettingsToolStripButton_Click);
+            // 
+            // AdminModeWarnToolStripButton
+            // 
+            this.AdminModeWarnToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AdminModeWarnToolStripButton.Image = global::FileCrapper.Properties.Resources.InAdminModeWarn;
+            this.AdminModeWarnToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AdminModeWarnToolStripButton.Name = "AdminModeWarnToolStripButton";
+            this.AdminModeWarnToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.AdminModeWarnToolStripButton.Text = "Admin Mode Warning";
+            this.AdminModeWarnToolStripButton.Visible = false;
+            this.AdminModeWarnToolStripButton.Click += new System.EventHandler(this.AdminModeWarnToolStripButton_Click);
             // 
             // AddFilesDialog
             // 
@@ -431,6 +476,10 @@
         private System.Windows.Forms.OpenFileDialog AddFilesDialog;
         private System.Windows.Forms.FolderBrowserDialog AddFolderDialog;
         private System.Windows.Forms.ToolStripStatusLabel ObjectsStatusLabel;
+        private System.Windows.Forms.ToolStripButton AdminModeWarnToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripStatusLabel AdminModeWarnToolStripLabel;
+        private System.Windows.Forms.Label NoFilesLabel;
     }
 }
 

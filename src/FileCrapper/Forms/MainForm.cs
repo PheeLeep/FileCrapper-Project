@@ -13,10 +13,18 @@ namespace FileCrapper.Forms {
         private void MainForm_Load(object sender, EventArgs e) {
             motherClass = new FCrapperMotherClass(lvFiles);
             motherClass.ObjectsChanged += MotherClass_ObjectsChanged;
+            if (Miscellaneous.IsInAdminMode()) {
+                AdminModeWarnToolStripButton.Visible = true;
+                AdminModeWarnToolStripLabel.Visible = true;
+                MessageBox.Show(this, "You're in admin mode! Please use this program with caution, as this will destroy your computer " +
+                                "if you crap some critical components, making your computer unbootable or having unexpected behavior.", "Admin Mode",
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void MotherClass_ObjectsChanged() {
             ObjectsStatusLabel.Text = motherClass.Count.ToString() + " object/s";
+            NoFilesLabel.Visible = motherClass.Count == 0; // Shows if the count is zero.
         }
 
         private void AddFilesToolStripButton_Click(object sender, EventArgs e) {
@@ -88,6 +96,10 @@ namespace FileCrapper.Forms {
         private void lvFiles_DragDrop(object sender, DragEventArgs e) {
             string[] objects = (string[])e.Data.GetData(DataFormats.FileDrop);
             motherClass.AddItems(objects);
+        }
+
+        private void AdminModeWarnToolStripButton_Click(object sender, EventArgs e) {
+            MessageBox.Show(this, Properties.Resources.AdminModeDisclaimer, "Admin Mode", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

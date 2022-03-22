@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -12,6 +13,14 @@ namespace FileCrapper.Classes {
     /// A static class containing miscellaneous things.
     /// </summary>
     internal static class Miscellaneous {
+        
+        /// <summary>
+        /// Checks if the running instance of the program, has an administrative privilege.
+        /// </summary>
+        /// <returns>Returns true, if it has an admin privilege; otherwise false.</returns>
+        internal static bool IsInAdminMode() {
+            return new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
+        }
 
         /// <summary>
         /// Shows the disclaimer message.

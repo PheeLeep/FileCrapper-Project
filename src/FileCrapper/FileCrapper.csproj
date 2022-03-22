@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fcrapper.ico" />
+    <None Include="Resources\InAdminModeWarn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
