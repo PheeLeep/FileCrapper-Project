@@ -18,7 +18,7 @@ namespace FileCrapper.Forms {
             ByteSwapCBox.Checked = Properties.Settings.Default.ByteSwapped;
             RNGByteGenCBox.Checked = Properties.Settings.Default.ByteGenerate;
 
-            DamageLabel.Text = "Damage: (x%)".Replace("x", DamageTrackbar.Value.ToString());
+            DamageLabel.Text = "Damage per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
             RoundsLabel.Text = "Rounds: x".Replace("x", RoundsTrackbar.Value.ToString());
             _initialized = true;
         }
@@ -34,7 +34,7 @@ namespace FileCrapper.Forms {
             if (_initialized) {
                 Properties.Settings.Default.DamageChance = DamageTrackbar.Value;
                 Properties.Settings.Default.Save();
-                DamageLabel.Text = "Damage: (x%)".Replace("x", DamageTrackbar.Value.ToString());
+                DamageLabel.Text = "Damage per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
             }
         }
 
