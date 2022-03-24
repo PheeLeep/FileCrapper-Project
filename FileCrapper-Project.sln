@@ -7,6 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04F9D8F0-C08
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCrapper", "src\FileCrapper\FileCrapper.csproj", "{38A9212C-4523-4590-ABA8-FCDA8783DA79}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{27E7889D-1062-47E3-A411-AF4A6C80C30B}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\Sample1.png = screenshots\Sample1.png
+		screenshots\Sample2.png = screenshots\Sample2.png
+		screenshots\Sample3.png = screenshots\Sample3.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

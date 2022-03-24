@@ -176,7 +176,7 @@
             this.DamageTrackbar.Name = "DamageTrackbar";
             this.DamageTrackbar.Size = new System.Drawing.Size(307, 56);
             this.DamageTrackbar.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.DamageTrackbar, "Adds on how much the chance will occur a damage.");
+            this.toolTip1.SetToolTip(this.DamageTrackbar, "Adds on how much the chance will occur a damage per round.");
             this.DamageTrackbar.Value = 1;
             this.DamageTrackbar.Scroll += new System.EventHandler(this.DamageTrackbar_Scroll);
             // 
@@ -185,9 +185,9 @@
             this.DamageLabel.AutoSize = true;
             this.DamageLabel.Location = new System.Drawing.Point(9, 33);
             this.DamageLabel.Name = "DamageLabel";
-            this.DamageLabel.Size = new System.Drawing.Size(93, 16);
+            this.DamageLabel.Size = new System.Drawing.Size(153, 16);
             this.DamageLabel.TabIndex = 0;
-            this.DamageLabel.Text = "Damage: (1%)";
+            this.DamageLabel.Text = "Damage per round: (1%)";
             // 
             // OptionsDialog
             // 
