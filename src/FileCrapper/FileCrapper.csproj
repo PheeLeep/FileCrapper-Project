@@ -19,9 +19,10 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;IsPortable</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,17 +58,19 @@
   <ItemGroup>
     <Compile Include="Classes\CrapMethods.cs" />
     <Compile Include="Classes\Delegates.cs" />
-    <Compile Include="Classes\FCrapperMotherClass.cs" />
-    <Compile Include="Classes\FCrapperObject.cs" />
     <Compile Include="Classes\FileSystemExtrasClass.cs" />
+    <Compile Include="Classes\IniFile.cs" />
     <Compile Include="Classes\Miscellaneous.cs" />
     <Compile Include="Classes\NativeMethods.cs" />
+    <Compile Include="Classes\FileObjectsHandler.cs" />
     <Compile Include="Classes\RandomEx.cs" />
-    <Compile Include="Forms\AboutDialog.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Classes\SettingsClass.cs" />
+    <Compile Include="Classes\FileObject.cs" />
+    <Compile Include="Controls\FileTab.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\AboutDialog.Designer.cs">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
+    <Compile Include="Controls\FileTab.Designer.cs">
+      <DependentUpon>FileTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ConfirmationDialog.cs">
       <SubType>Form</SubType>
@@ -75,11 +78,11 @@
     <Compile Include="Forms\ConfirmationDialog.Designer.cs">
       <DependentUpon>ConfirmationDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CrapProgressDialog.cs">
+    <Compile Include="Forms\CorruptProgressDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CrapProgressDialog.Designer.cs">
-      <DependentUpon>CrapProgressDialog.cs</DependentUpon>
+    <Compile Include="Forms\CorruptProgressDialog.Designer.cs">
+      <DependentUpon>CorruptProgressDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -101,14 +104,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AboutDialog.resx">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\FileTab.resx">
+      <DependentUpon>FileTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ConfirmationDialog.resx">
       <DependentUpon>ConfirmationDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CrapProgressDialog.resx">
-      <DependentUpon>CrapProgressDialog.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CorruptProgressDialog.resx">
+      <DependentUpon>CorruptProgressDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -169,6 +172,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fcrapper.ico" />
+    <None Include="Resources\ProgressExplosion.png" />
+    <None Include="Resources\ConfirmWarning.png" />
+    <None Include="Resources\ConfirmSystemFileWarn.png" />
+    <None Include="Resources\SettingsSaneMode.png" />
+    <None Include="Resources\SettingsQuickMode.png" />
+    <None Include="Resources\SettingsBalanceIntense.png" />
+    <None Include="Resources\SettingsAdjust.png" />
+    <None Include="Resources\MoveSingleForward.png" />
+    <None Include="Resources\MoveSingleBackward.png" />
+    <None Include="Resources\MoveLastForward.png" />
+    <None Include="Resources\MoveLastBackward.png" />
+    <None Include="Resources\IsSystemIcon.png" />
+    <None Include="Resources\Processing3.png" />
+    <None Include="Resources\Processing2.png" />
+    <None Include="Resources\Processing1.png" />
+    <None Include="Resources\Processing.png" />
+    <None Include="Resources\CrumpledPaper.png" />
+    <None Include="Resources\SettingsOption.png" />
+    <None Include="Resources\CrapFiles.png" />
+    <None Include="Resources\RemoveAll.png" />
+    <None Include="Resources\RemoveSelected.png" />
+    <None Include="Resources\MultipleSelect.png" />
+    <None Include="Resources\AddObjects1.png" />
+    <None Include="Resources\AddObjects.png" />
     <None Include="Resources\SelectAll.png" />
     <None Include="Resources\DeleteSelected.png" />
     <None Include="Resources\DeleteAll.png" />

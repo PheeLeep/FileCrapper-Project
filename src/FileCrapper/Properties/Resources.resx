@@ -117,50 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DisclaimerText" xml:space="preserve">
+    <value>This program literally destroys the files. Misusing/Abusing this program for your personal agenda, might damage important files. (or worse, the computer might not boot anymore, if you destroy system files.)</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="NewFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CrapItems" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CrapItems.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddObjects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddObjects1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DisclaimerAcknowledge" xml:space="preserve">
-    <value>In this message, you're agree to hold responsibility of the damage because you use this program. Click Yes if you're agree, or No if you're not and the program will close automatically.</value>
+  <data name="ProcessingText" xml:space="preserve">
+    <value>Loading... Please wait.</value>
   </data>
-  <data name="fcrapper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fcrapper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CrumpledPaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrumpledPaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HelpText" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HelpText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="AdminModeDisclaimer" xml:space="preserve">
-    <value>When you're in admin mode, you're allowed to select and crap files from some restricted folder/s. However, this can lead to undesirable effects, especially your computer if you crap its critical files (like drivers), that can cause your computer to not boot anymore and the like.</value>
-  </data>
-  <data name="SettingsImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SettingsImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoveLastForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveLastForward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InAdminModeWarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InAdminModeWarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DisclaimerText" xml:space="preserve">
-    <value>This program literally destroys the files. Misusing/Abusing this program for your personal agenda, might damage important files. (or worse, the computer might not boot anymore, if you destroy system files.)</value>
+  <data name="MultipleSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MultipleSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fcrapper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fcrapper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddFolder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddFolder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MoveSingleForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveSingleForward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DeleteAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DeleteAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DeleteSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DeleteSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SettingsQuickMode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsQuickMode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SelectAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SelectAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IsSystemIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IsSystemIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsAdjust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsAdjust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveLastBackward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveLastBackward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RemoveSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RemoveSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsSaneMode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsSaneMode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NoFilesAddedText" xml:space="preserve">
+    <value>Add objects here by drag and drop, or by clicking 'Add File/s' or 'Add Folder'
+
+To remove items, tick the checkbox of the item you want to remove, right-click this list and select 'Remove Checked Item/s'.</value>
+  </data>
+  <data name="CrapFiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrapFiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfirmWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfirmWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpText" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpText.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Processing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Processing3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DisclaimerAcknowledge" xml:space="preserve">
+    <value>In this message, you're agree to hold responsibility of the damage because you use this program. Click Yes if you're agree, or No if you're not and the program will close automatically.</value>
+  </data>
+  <data name="AdminModeDisclaimer" xml:space="preserve">
+    <value>When you're in admin mode, you're allowed to select and crap files from some restricted folder/s. However, this can lead to undesirable effects, especially your computer if you crap its critical files (like drivers), that can cause your computer to not boot anymore and the like.</value>
+  </data>
+  <data name="ConfirmSystemFileWarn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfirmSystemFileWarn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RemoveAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RemoveAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsBalanceIntense" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsBalanceIntense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveSingleBackward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveSingleBackward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsOption" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingsOption.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProgressExplosion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProgressExplosion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

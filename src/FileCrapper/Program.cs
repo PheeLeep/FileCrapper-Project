@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileCrapper.Classes;
+using System;
 using System.Windows.Forms;
 using static FileCrapper.Classes.Miscellaneous;
 using static FileCrapper.Classes.NativeMethods;
@@ -22,6 +23,7 @@ namespace FileCrapper {
                 return;
             }
             AttachConsole(-1);
+            SettingsClass.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.MainForm());

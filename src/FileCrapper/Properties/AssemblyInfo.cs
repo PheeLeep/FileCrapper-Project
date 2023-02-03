@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FileCrapper")]
-[assembly: AssemblyCopyright("Copyright © PheeLeep 2022")]
+[assembly: AssemblyCopyright("Copyright © PheeLeep 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

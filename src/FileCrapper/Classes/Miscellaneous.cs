@@ -13,7 +13,7 @@ namespace FileCrapper.Classes {
     /// A static class containing miscellaneous things.
     /// </summary>
     internal static class Miscellaneous {
-        
+
         /// <summary>
         /// Checks if the running instance of the program, has an administrative privilege.
         /// </summary>
@@ -99,7 +99,50 @@ namespace FileCrapper.Classes {
             } catch {
                 return TimeSpan.Zero;
             } // Throw TimeSpan.Zero instead of error
+        }
 
+        /// <summary>
+        ///     ''' Calculate the bytes of the image.
+        ///     ''' </summary>
+        ///     ''' <param name="byt">The length of the image.</param>
+        ///     ''' <returns>Returns the String format.</returns>
+        ///     ''' <remarks></remarks>
+        internal static string CalculateBytes(long byt) {
+            double DoubleBytes;
+            try {
+                switch (byt) {
+                    case long n when byt >= 1099511627776: {
+                        DoubleBytes = System.Convert.ToDouble(byt / (double)1099511627776);
+                        return Math.Round(DoubleBytes, 2).ToString() + " TB";
+                    }
+
+                    case long n when 1073741824 <= byt && byt <= 1099511627775: {
+                        DoubleBytes = System.Convert.ToDouble(byt / (double)1073741824);
+                        return Math.Round(DoubleBytes, 2).ToString() + " GB";
+                    }
+
+                    case long n when 1048576 <= byt && byt <= 1073741823: {
+                        DoubleBytes = System.Convert.ToDouble(byt / (double)1048576);
+                        return Math.Round(DoubleBytes, 2).ToString() + " MB";
+                    }
+
+                    case long n when 1024 <= byt && byt <= 1048575: {
+                        DoubleBytes = System.Convert.ToDouble(byt / (double)1024);
+                        return Math.Round(DoubleBytes, 2).ToString() + " KB";
+                    }
+
+                    case long n when 0 <= byt && byt <= 1023: {
+                        DoubleBytes = byt;
+                        return Math.Round(DoubleBytes, 2).ToString() + " bytes";
+                    }
+
+                    default: {
+                        return "0 KB";
+                    }
+                }
+            } catch {
+                return "0 KB";
+            }
         }
     }
 }

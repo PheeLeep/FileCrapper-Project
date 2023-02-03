@@ -83,9 +83,9 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AddFolder1 {
+        internal static System.Drawing.Bitmap AddObjects {
             get {
-                object obj = ResourceManager.GetObject("AddFolder1", resourceCulture);
+                object obj = ResourceManager.GetObject("AddObjects", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -102,9 +102,9 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CrapItems {
+        internal static System.Drawing.Bitmap ConfirmSystemFileWarn {
             get {
-                object obj = ResourceManager.GetObject("CrapItems", resourceCulture);
+                object obj = ResourceManager.GetObject("ConfirmSystemFileWarn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -112,9 +112,9 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DeleteAll {
+        internal static System.Drawing.Bitmap ConfirmWarning {
             get {
-                object obj = ResourceManager.GetObject("DeleteAll", resourceCulture);
+                object obj = ResourceManager.GetObject("ConfirmWarning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -122,9 +122,19 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DeleteSelected {
+        internal static System.Drawing.Bitmap CrapFiles {
             get {
-                object obj = ResourceManager.GetObject("DeleteSelected", resourceCulture);
+                object obj = ResourceManager.GetObject("CrapFiles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CrumpledPaper {
+            get {
+                object obj = ResourceManager.GetObject("CrumpledPaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,9 +195,9 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NewFile {
+        internal static System.Drawing.Bitmap IsSystemIcon {
             get {
-                object obj = ResourceManager.GetObject("NewFile", resourceCulture);
+                object obj = ResourceManager.GetObject("IsSystemIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,9 +205,9 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SelectAll {
+        internal static System.Drawing.Bitmap MoveLastBackward {
             get {
-                object obj = ResourceManager.GetObject("SelectAll", resourceCulture);
+                object obj = ResourceManager.GetObject("MoveLastBackward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,9 +215,149 @@ namespace FileCrapper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SettingsImage {
+        internal static System.Drawing.Bitmap MoveLastForward {
             get {
-                object obj = ResourceManager.GetObject("SettingsImage", resourceCulture);
+                object obj = ResourceManager.GetObject("MoveLastForward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoveSingleBackward {
+            get {
+                object obj = ResourceManager.GetObject("MoveSingleBackward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MoveSingleForward {
+            get {
+                object obj = ResourceManager.GetObject("MoveSingleForward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MultipleSelect {
+            get {
+                object obj = ResourceManager.GetObject("MultipleSelect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add objects here by drag and drop, or by clicking &apos;Add File/s&apos; or &apos;Add Folder&apos;
+        ///
+        ///To remove items, tick the checkbox of the item you want to remove, right-click this list and select &apos;Remove Checked Item/s&apos;..
+        /// </summary>
+        internal static string NoFilesAddedText {
+            get {
+                return ResourceManager.GetString("NoFilesAddedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Processing {
+            get {
+                object obj = ResourceManager.GetObject("Processing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading... Please wait..
+        /// </summary>
+        internal static string ProcessingText {
+            get {
+                return ResourceManager.GetString("ProcessingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProgressExplosion {
+            get {
+                object obj = ResourceManager.GetObject("ProgressExplosion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveAll {
+            get {
+                object obj = ResourceManager.GetObject("RemoveAll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RemoveSelected {
+            get {
+                object obj = ResourceManager.GetObject("RemoveSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsAdjust {
+            get {
+                object obj = ResourceManager.GetObject("SettingsAdjust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsBalanceIntense {
+            get {
+                object obj = ResourceManager.GetObject("SettingsBalanceIntense", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsOption {
+            get {
+                object obj = ResourceManager.GetObject("SettingsOption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsQuickMode {
+            get {
+                object obj = ResourceManager.GetObject("SettingsQuickMode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingsSaneMode {
+            get {
+                object obj = ResourceManager.GetObject("SettingsSaneMode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

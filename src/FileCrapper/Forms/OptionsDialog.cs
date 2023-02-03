@@ -1,76 +1,84 @@
-﻿using System;
+﻿using FileCrapper.Classes;
+using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace FileCrapper.Forms {
     public partial class OptionsDialog : Form {
-        bool _initialized = false;
+        private bool isInitialized = false;
+        private bool isMouseDown = false;
+        private const Int32 BCM_SETSHIELD = 0x160C;
+        private readonly object locker = new object();
+
+        [DllImport("user32.dll")]
+        private static extern int SendMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
+
         public OptionsDialog() {
             InitializeComponent();
         }
+        protected override CreateParams CreateParams {
+            get {
+                // Minimize form and control flickering.
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
 
         private void OptionsDialog_Load(object sender, EventArgs e) {
-            IncludeSubfolderFilesCheckbox.Checked = Properties.Settings.Default.FileInSubfolderIncluded;
-            DamageTrackbar.Value = Properties.Settings.Default.DamageChance;
-            RoundsTrackbar.Value = Properties.Settings.Default.Rounds;
-            IgnoreHeaderBytes.Checked = Properties.Settings.Default.ExcludeHeaderBytes;
+            AddRemoveContextMenuBtn.FlatStyle = FlatStyle.System;
+            SendMessage(AddRemoveContextMenuBtn.Handle, BCM_SETSHIELD, 0, 1);
 
-            ByteNullCBox.Checked = Properties.Settings.Default.ByteNullify;
-            ByteSwapCBox.Checked = Properties.Settings.Default.ByteSwapped;
-            RNGByteGenCBox.Checked = Properties.Settings.Default.ByteGenerate;
-
-            DamageLabel.Text = "Damage per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
-            RoundsLabel.Text = "Rounds: x".Replace("x", RoundsTrackbar.Value.ToString());
-            _initialized = true;
+#if IsPortable
+            AddRemoveContextMenuBtn.Enabled = false;
+            PanelPortableWarning.Show();
+#endif
+            ReloadItems();
+            ChangeIntensityDesc();
         }
 
         private void IncludeSubfolderFilesCheckbox_CheckedChanged(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.FileInSubfolderIncluded = IncludeSubfolderFilesCheckbox.Checked;
-                Properties.Settings.Default.Save();
+            if (isInitialized) {
+                SettingsClass.SubfolderRecursion = IncludeSubfolderFilesCheckbox.Checked;
             }
         }
 
         private void DamageTrackbar_Scroll(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.DamageChance = DamageTrackbar.Value;
-                Properties.Settings.Default.Save();
-                DamageLabel.Text = "Damage per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
+            if (isInitialized) {
+                SettingsClass.DamageChance = DamageTrackbar.Value;
+                DamageLabel.Text = "Damage Rate per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
             }
         }
 
         private void RoundsTrackbar_Scroll(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.Rounds = RoundsTrackbar.Value;
-                Properties.Settings.Default.Save();
+            if (isInitialized) {
+                SettingsClass.Rounds = RoundsTrackbar.Value;
                 RoundsLabel.Text = "Rounds: x".Replace("x", RoundsTrackbar.Value.ToString());
             }
         }
 
         private void IgnoreHeaderBytes_CheckedChanged(object sender, EventArgs e) {
-            if (_initialized) {
+            if (isInitialized) {
                 Properties.Settings.Default.ExcludeHeaderBytes = IgnoreHeaderBytes.Checked;
-                Properties.Settings.Default.Save();
             }
         }
 
         private void ByteSwapCBox_CheckedChanged(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.ByteSwapped = ByteSwapCBox.Checked;
-                Properties.Settings.Default.Save();
+            if (isInitialized) {
+                SettingsClass.ByteSwapped = ByteSwapCBox.Checked;
             }
         }
 
         private void ByteNullCBox_CheckedChanged(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.ByteNullify = ByteNullCBox.Checked;
-                Properties.Settings.Default.Save();
+            if (isInitialized) {
+                SettingsClass.ByteNullify = ByteNullCBox.Checked;
             }
         }
 
         private void RNGByteGenCBox_CheckedChanged(object sender, EventArgs e) {
-            if (_initialized) {
-                Properties.Settings.Default.ByteGenerate = RNGByteGenCBox.Checked;
-                Properties.Settings.Default.Save();
+            if (isInitialized) {
+                SettingsClass.ByteGenerate = RNGByteGenCBox.Checked;
             }
         }
 
@@ -80,6 +88,106 @@ namespace FileCrapper.Forms {
                 RNGByteGenCBox.Enabled = false;
             } else {
                 RNGByteGenCBox.Enabled = true;
+            }
+        }
+
+        private void IntensityTrackBar_Scroll(object sender, EventArgs e) {
+            ChangeIntensityDesc();
+            IntensityLabel.Update();
+            IntensityIcon.Update();
+        }
+
+        private void ChangeIntensityDesc() {
+            switch (IntensityTrackBar.Value) {
+                case 0:
+                    IntensityLabel.Text = "Custom:\r\n\r\nCustomize the damage chance, passes, etc.";
+                    IntensityIcon.Image = Properties.Resources.SettingsAdjust;
+                    break;
+                case 1:
+                    IntensityLabel.Text = "Quick:\r\n\r\nQuickly crapping a file with less performance hits. File corruption efficacy are possibly less.";
+                    IntensityIcon.Image = Properties.Resources.SettingsQuickMode;
+                    break;
+                case 2:
+                    IntensityLabel.Text = "Balance:\r\n\r\nBalances the succession speed and efficacy of crapping files.";
+                    IntensityIcon.Image = Properties.Resources.SettingsBalanceIntense;
+                    break;
+                case 3:
+                    IntensityLabel.Text = "Sanity-wise:\r\n\r\nSignificantly increase the file corruption efficacy," +
+                                          " in exchange of performance penalty and drive's wear and tear.";
+                    IntensityIcon.Image = Properties.Resources.SettingsSaneMode;
+                    break;
+            }
+        }
+        private void ReloadItems() {
+            lock (locker) {
+                isInitialized = false;
+                IncludeSubfolderFilesCheckbox.Checked = SettingsClass.SubfolderRecursion;
+                DamageTrackbar.Value = SettingsClass.DamageChance;
+                RoundsTrackbar.Value = SettingsClass.Rounds;
+                IgnoreHeaderBytes.Checked = SettingsClass.HeaderExclusion;
+                IntensityTrackBar.Value = SettingsClass.Intensity;
+
+                ByteNullCBox.Checked = SettingsClass.ByteNullify;
+                ByteSwapCBox.Checked = SettingsClass.ByteSwapped;
+                RNGByteGenCBox.Checked = SettingsClass.ByteGenerate;
+                PassesTrackBar.Value = SettingsClass.Pass;
+                DamageLabel.Text = "Damage Rate per round: (x%)".Replace("x", DamageTrackbar.Value.ToString());
+                RoundsLabel.Text = "Rounds: x".Replace("x", RoundsTrackbar.Value.ToString());
+                PassesLabel.Text = "Pass" + (PassesTrackBar.Value != 1 ? "es" : "") + ": " + PassesTrackBar.Value.ToString();
+                HighPrioThreadCBox.Checked = SettingsClass.ThreadHighPriority;
+                SetOptions(SettingsClass.Intensity == 0);
+                isInitialized = true;
+            }
+        }
+
+        private void PassesTrackBar_Scroll(object sender, EventArgs e) {
+            if (isInitialized) {
+                SettingsClass.Pass = PassesTrackBar.Value;
+                PassesLabel.Text = "Pass" + (PassesTrackBar.Value != 1 ? "es" : "") + ": " + PassesTrackBar.Value.ToString();
+            }
+        }
+
+        private void OptionsDialog_FormClosing(object sender, FormClosingEventArgs e) {
+            SettingsClass.Save();
+        }
+
+        private void SetOptions(bool isAccessible) {
+            DamageTrackbar.Enabled = isAccessible;
+            RoundsTrackbar.Enabled = isAccessible;
+            IgnoreHeaderBytes.Enabled = isAccessible;
+            ByteNullCBox.Enabled = isAccessible;
+            ByteSwapCBox.Enabled = isAccessible;
+            RNGByteGenCBox.Enabled = isAccessible;
+            PassesTrackBar.Enabled = isAccessible;
+
+            PanelPreferedDamage.Visible = !isAccessible;
+        }
+
+        private void IntensityTrackBar_MouseDown(object sender, MouseEventArgs e) {
+            if (!isMouseDown && e.Button == MouseButtons.Left) isMouseDown = true;
+        }
+
+        private void IntensityTrackBar_MouseUp(object sender, MouseEventArgs e) {
+            if (isMouseDown && isInitialized) {
+                isMouseDown = false;
+                SettingsClass.Intensity = IntensityTrackBar.Value;
+                ReloadItems();
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            string repoLink = "https://github.com/PheeLeep/FileCrapper-Project";
+            Process.Start(repoLink);
+        }
+
+        private void LicenseLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            string licenseLink = "https://github.com/PheeLeep/FileCrapper-Project/blob/master/LICENSE";
+            Process.Start(licenseLink);
+        }
+
+        private void HighPrioThreadCBox_CheckedChanged(object sender, EventArgs e) {
+            if (isInitialized) {
+                SettingsClass.ThreadHighPriority = HighPrioThreadCBox.Checked;
             }
         }
     }

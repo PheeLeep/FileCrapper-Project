@@ -1,109 +1,232 @@
 ﻿using FileCrapper.Classes;
+using FileCrapper.Controls;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FileCrapper.Forms {
     public partial class MainForm : Form {
-        private FCrapperMotherClass motherClass;
+
+        private bool isKeyDown = false;
+        private int currentPage = 1;
+        private int maxPage = 1;
+
         public MainForm() {
             InitializeComponent();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
+        protected override CreateParams CreateParams {
+            get {
+                // Minimize form and control flickering.
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
         private void MainForm_Load(object sender, EventArgs e) {
-            motherClass = new FCrapperMotherClass(lvFiles);
-            motherClass.ObjectsChanged += MotherClass_ObjectsChanged;
+            FileObjectsHandler.StatusChanged += ObjectsHandlerClass_StatusChanged;
+            FileObjectsHandler.ItemsChanged += ObjectsHandlerClass_ItemsChanged;
+            FileObjectsHandler.StatusInfoOccurred += ObjectsHandlerClass_StatusInfoOccurred; ;
             if (Miscellaneous.IsInAdminMode()) {
-                AdminModeWarnToolStripButton.Visible = true;
-                AdminModeWarnToolStripLabel.Visible = true;
                 MessageBox.Show(this, "You're in admin mode! Please use this program with caution, as this will destroy your computer " +
                                 "if you crap some critical components, making your computer unbootable or having unexpected behavior.", "Admin Mode",
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            NoFilesLabel.Text = Properties.Resources.NoFilesAddedText;
         }
 
-        private void MotherClass_ObjectsChanged() {
-            ObjectsStatusLabel.Text = motherClass.Count.ToString() + " object/s";
-            NoFilesLabel.Visible = motherClass.Count == 0; // Shows if the count is zero.
+        private void ObjectsHandlerClass_StatusInfoOccurred(string statusInfo) {
+            Invoke(new Action(() => {
+                if (FileObjectsHandler.Status == FileObjectsHandler.StatusE.Ready || FileObjectsHandler.Status == FileObjectsHandler.StatusE.Crapping)
+                    return;
+                NoFilesLabel.Text = statusInfo;
+                NoFilesLabel.Update();
+            }));
         }
 
-        private void AddFilesToolStripButton_Click(object sender, EventArgs e) {
-            if (AddFilesDialog.ShowDialog() == DialogResult.OK)
-                motherClass.AddItems(AddFilesDialog.FileNames);
+        private void ObjectsHandlerClass_ItemsChanged() {
+            Invoke(new Action(() => {
+                if (FileObjectsHandler.Count > 50) {
+                    int max = FileObjectsHandler.Count;
+                    maxPage = 0;
+                    while (max > 0) {
+                        max -= 50;
+                        maxPage++;
+                    }
+                    if (currentPage >= maxPage) currentPage = maxPage;
+                }
+                PageManagementPanel.Visible = FileObjectsHandler.Count > 50;
+                MovePage();
+            }));
         }
 
-        private void AddFolderToolStripButton_Click(object sender, EventArgs e) {
-            if (AddFolderDialog.ShowDialog() == DialogResult.OK)
-                motherClass.AddItems(new string[] { AddFolderDialog.SelectedPath });
+        private void MovePage() {
+            int minIndex = 50 * (currentPage - 1);
+            int maxIndex = minIndex + 49;
+            if (maxIndex >= FileObjectsHandler.Count) maxIndex = FileObjectsHandler.Count;
+            PageCountLabel.Text = "/" + maxPage.ToString();
+            PageTextBox.Text = currentPage.ToString();
+            ModifyFileTab(FileObjectsHandler.GetItems(minIndex, maxIndex));
         }
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
-            Close();
-        }
+        private void ModifyFileTab(FileObject[] objects) {
+            ItemsManPanel.Visible = false;
 
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e) {
-            new Forms.AboutDialog().ShowDialog();
-        }
-
-        private void DisclaimerToolStripMenuItem_Click(object sender, EventArgs e) {
-            Miscellaneous.ShowDisclaimer(false);
-        }
-
-        private void SettingsToolStripButton_Click(object sender, EventArgs e) {
-            new Forms.OptionsDialog().ShowDialog();
-        }
-
-        private void CheckAllToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (motherClass.Count == 0) return;
-            lvFiles.BeginUpdate();
-            foreach (ListViewItem item in lvFiles.Items)
-                item.Checked = true;
-            lvFiles.EndUpdate();
-        }
-
-        private void UncheckAllToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (motherClass.Count == 0) return;
-            lvFiles.BeginUpdate();
-            foreach (ListViewItem item in lvFiles.Items)
-                item.Checked = false;
-            lvFiles.EndUpdate();
-        }
-
-        private void RemoveCheckedItemsToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (motherClass.Count == 0) return;
-            motherClass.RemoveCheckItems();
-        }
-
-        private void RemoveAllItemsToolStripMenuItem_Click(object sender, EventArgs e) {
-            if (motherClass.Count == 0) return;
-            checkAllToolStripMenuItem.PerformClick();
-            motherClass.RemoveCheckItems();
-        }
-
-        private void StartCrapToolStripButton_Click(object sender, EventArgs e) {
-            if (motherClass.Count == 0) {
-                MessageBox.Show(this, "No files to crap. Please add files first.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+            for (int i = 0; i < ListsPanel.Controls.Count; i++) {
+                FileTab ftb = (FileTab)ListsPanel.Controls[i];
+                ftb.IsSelected = false;
+                if (i >= objects.Length) {
+                    ftb.Visible = false;
+                    ftb.Tag = null;
+                    continue;
+                }
+                ftb.Visible = true;
+                ftb.FileNameLabel.Text = objects[i].FileInfo.Name;
+                ftb.FilePathLabel.Text = objects[i].FileInfo.FullName;
+                ftb.IsSystemPartPBox.Visible = objects[i].IsASystem;
+                ftb.Tag = objects[i].Guid;
             }
-            if (new Forms.ConfirmationDialog().ShowDialog() == DialogResult.Yes)
-                motherClass.Run();
+            ItemsManPanel.Visible = true;
         }
 
-        private void HelpToolStripMenuItem1_Click(object sender, EventArgs e) {
-            MessageBox.Show(this, Properties.Resources.HelpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void ObjectsHandlerClass_StatusChanged() {
+            Invoke(new Action(() => {
+                SwitchButtons(FileObjectsHandler.Status == FileObjectsHandler.StatusE.Ready);
+                iconBox.Image = Properties.Resources.Processing;
+                switch (FileObjectsHandler.Status) {
+                    case FileObjectsHandler.StatusE.Ready:
+                        ObjectsCountLabel.Text = FileObjectsHandler.Count.ToString();
+                        if (FileObjectsHandler.Count == 0) {
+                            if (StagePanel.Controls.GetChildIndex(EmptyItemsPanel) != 0) EmptyItemsPanel.BringToFront();
+                            iconBox.Image = Properties.Resources.CrumpledPaper;
+                            NoFilesLabel.Text = Properties.Resources.NoFilesAddedText;
+                            return;
+                        }
+                        ItemsManPanel.BringToFront();
+                        break;
+                    case FileObjectsHandler.StatusE.Adding:
+                        if (StagePanel.Controls.GetChildIndex(EmptyItemsPanel) != 0) EmptyItemsPanel.BringToFront();
+                        NoFilesLabel.Text = "Adding... Please wait.";
+                        break;
+                    case FileObjectsHandler.StatusE.Removing:
+                        if (StagePanel.Controls.GetChildIndex(EmptyItemsPanel) != 0) EmptyItemsPanel.BringToFront();
+                        NoFilesLabel.Text = "Removing... Please wait.";
+                        break;
+                    case FileObjectsHandler.StatusE.Crapping:
+                        if (StagePanel.Controls.GetChildIndex(EmptyItemsPanel) != 0) EmptyItemsPanel.BringToFront();
+                        iconBox.Image = Properties.Resources.CrumpledPaper;
+                        NoFilesLabel.Text = "Crapping objects... Please wait.";
+                        break;
+                }
+
+            }));
         }
 
-        private void lvFiles_DragEnter(object sender, DragEventArgs e) {
-            e.Effect = e.Data.GetDataPresent(DataFormats.FileDrop) ? DragDropEffects.Move : DragDropEffects.None;
-        }
-
-        private void lvFiles_DragDrop(object sender, DragEventArgs e) {
-            string[] objects = (string[])e.Data.GetData(DataFormats.FileDrop);
-            motherClass.AddItems(objects);
+        private void SwitchButtons(bool isEnable) {
+            AddObjectsButton.Enabled = isEnable;
+            TickAllButton.Enabled = isEnable;
+            RemoveSelectedButton.Enabled = isEnable;
+            RemoveAllItemsBtn.Enabled = isEnable;
+            CrapAllFilesButton.Enabled = isEnable;
+            SettingsButton.Enabled = isEnable;
         }
 
         private void AdminModeWarnToolStripButton_Click(object sender, EventArgs e) {
             MessageBox.Show(this, Properties.Resources.AdminModeDisclaimer, "Admin Mode", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void AddObjectsButton_MouseClick(object sender, MouseEventArgs e) {
+            AddObjectsCMS.Show(AddObjectsButton, e.Location);
+        }
+
+        private void addFilesToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (AddFilesDialog.ShowDialog() == DialogResult.OK)
+                FileObjectsHandler.AddItems(AddFilesDialog.FileNames);
+        }
+
+        private void addFromFolderToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (AddFolderDialog.ShowDialog() == DialogResult.OK)
+                FileObjectsHandler.AddItemsFromDirectory(AddFolderDialog.SelectedPath, SettingsClass.SubfolderRecursion);
+        }
+
+        private void TickAllButton_Click(object sender, EventArgs e) {
+            if (ListsPanel.Controls.Count == 0) return;
+            foreach (FileTab ftb in ListsPanel.Controls)
+                ftb.IsSelected = true;
+        }
+
+        private void RemoveSelectedButton_Click(object sender, EventArgs e) {
+            if (FileObjectsHandler.Count == 0) return;
+            List<Guid> selectedGuids = new List<Guid>();
+            foreach (FileTab ftb in ListsPanel.Controls)
+                if (ftb.Visible && ftb.IsSelected)
+                    selectedGuids.Add((Guid)ftb.Tag);
+            if (selectedGuids.Count == 0) return;
+            if (MessageBox.Show(this, "Do you want to remove selected item/s?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+            FileObjectsHandler.RemoveItems(selectedGuids.ToArray());
+        }
+
+        private void PageTextBox_KeyDown(object sender, KeyEventArgs e) {
+            if (!isKeyDown && e.KeyCode == Keys.Return) {
+                isKeyDown = true;
+                if (!int.TryParse(PageTextBox.Text, out int x) || x < 1 || x > maxPage) {
+                    PageTextBox.BackColor = System.Drawing.Color.Red;
+                    return;
+                }
+                PageTextBox.BackColor = System.Drawing.Color.White;
+                currentPage = x;
+                MovePage();
+            }
+        }
+
+        private void PageTextBox_KeyUp(object sender, KeyEventArgs e) {
+            if (isKeyDown) isKeyDown = false;
+        }
+
+        private void MovePreviousPageButton_Click(object sender, EventArgs e) {
+            if (currentPage > 1) currentPage--;
+            MovePage();
+        }
+
+        private void MoveNextPageButton_Click(object sender, EventArgs e) {
+            if (currentPage < maxPage) currentPage++;
+            MovePage();
+        }
+
+        private void MoveFirstPageButton_Click(object sender, EventArgs e) {
+            currentPage = 1;
+            MovePage();
+        }
+
+        private void MoveLastPageButton_Click(object sender, EventArgs e) {
+            currentPage = maxPage;
+            MovePage();
+        }
+
+        private void RemoveAllItemsBtn_Click(object sender, EventArgs e) {
+            if (FileObjectsHandler.Count == 0) return;
+            if (MessageBox.Show(this, "Do you want to remove all item/s?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
+            FileObjectsHandler.RemoveAllItems();
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e) {
+            new OptionsDialog().ShowDialog(this);
+        }
+
+        private void CrapAllFilesButton_Click(object sender, EventArgs e) {
+            if (FileObjectsHandler.Count == 0) {
+                MessageBox.Show(this, "No files to destroy.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (new ConfirmationDialog().ShowDialog() != DialogResult.Yes) return;
+            CorruptProgressDialog c = new CorruptProgressDialog();
+            c.CreateControl(); // Force to create form.
+            FileObjectsHandler.StartFileCrapping();
+            c.ShowDialog(this);
         }
     }
 }
