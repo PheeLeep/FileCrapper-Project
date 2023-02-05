@@ -53,6 +53,9 @@
             this.PanelPortableWarning = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -101,6 +104,8 @@
             this.RNGByteGenCBox.Text = "Random byte generation.";
             this.toolTip1.SetToolTip(this.RNGByteGenCBox, "Randomly generate a byte, and overwrites on the selected position.");
             this.RNGByteGenCBox.UseVisualStyleBackColor = true;
+            this.RNGByteGenCBox.CheckedChanged += new System.EventHandler(this.RNGByteGenCBox_CheckedChanged);
+            this.RNGByteGenCBox.Click += new System.EventHandler(this.CBoxClick);
             // 
             // ByteNullCBox
             // 
@@ -112,6 +117,8 @@
             this.ByteNullCBox.Text = "Byte Nullify";
             this.toolTip1.SetToolTip(this.ByteNullCBox, "Nullifies the selected byte of the file.");
             this.ByteNullCBox.UseVisualStyleBackColor = true;
+            this.ByteNullCBox.CheckedChanged += new System.EventHandler(this.ByteNullCBox_CheckedChanged);
+            this.ByteNullCBox.Click += new System.EventHandler(this.CBoxClick);
             // 
             // ByteSwapCBox
             // 
@@ -123,6 +130,8 @@
             this.ByteSwapCBox.Text = "Byte Swapping";
             this.toolTip1.SetToolTip(this.ByteSwapCBox, "Swaps two different bytes\' positions.");
             this.ByteSwapCBox.UseVisualStyleBackColor = true;
+            this.ByteSwapCBox.CheckedChanged += new System.EventHandler(this.ByteSwapCBox_CheckedChanged);
+            this.ByteSwapCBox.Click += new System.EventHandler(this.CBoxClick);
             // 
             // RoundsTrackbar
             // 
@@ -366,8 +375,9 @@
             this.AddRemoveContextMenuBtn.Name = "AddRemoveContextMenuBtn";
             this.AddRemoveContextMenuBtn.Size = new System.Drawing.Size(295, 32);
             this.AddRemoveContextMenuBtn.TabIndex = 3;
-            this.AddRemoveContextMenuBtn.Text = "Add to Explorer\'s Context Menu\r\n";
+            this.AddRemoveContextMenuBtn.Text = "Add to Explorer\'s Context Menu";
             this.AddRemoveContextMenuBtn.UseVisualStyleBackColor = true;
+            this.AddRemoveContextMenuBtn.Click += new System.EventHandler(this.AddRemoveContextMenuBtn_Click);
             // 
             // PanelPortableWarning
             // 
@@ -392,6 +402,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.linkLabel2);
+            this.tabPage4.Controls.Add(this.label9);
+            this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Controls.Add(this.linkLabel1);
             this.tabPage4.Controls.Add(this.label4);
@@ -407,6 +420,35 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "About";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(125, 224);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(109, 20);
+            this.linkLabel2.TabIndex = 17;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Icons by Icons8";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(69, 224);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Icons: ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(45, 199);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Credit/s:";
             // 
             // label7
             // 
@@ -570,5 +612,8 @@
         private System.Windows.Forms.PictureBox IconPictureBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox HighPrioThreadCBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

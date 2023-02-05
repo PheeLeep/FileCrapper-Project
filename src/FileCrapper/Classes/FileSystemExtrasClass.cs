@@ -15,7 +15,7 @@ namespace FileCrapper.Classes {
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
         public static bool IsBinary(byte[] bytes) {
-            if (!Properties.Settings.Default.ExcludeHeaderBytes) return false;
+            if (!SettingsClass.HeaderExclusion) return false;
             if (bytes == null) throw new ArgumentNullException("bytes");
             if (bytes.Length > 4096) throw new ArgumentException("Byte length must be at least 4096 bytes (4 KB).");
 
@@ -26,7 +26,6 @@ namespace FileCrapper.Classes {
                     ctrlCharCounts++;
             }
             int perce = ctrlCharCounts * 100 / bytes.Length;
-            Console.WriteLine("Chance of binary (in %): " + perce.ToString());
             return perce > 10;
         }
 

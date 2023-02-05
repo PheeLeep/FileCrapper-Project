@@ -77,6 +77,7 @@
             // CloseButton
             // 
             this.CloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloseButton.Enabled = false;
             this.CloseButton.ForeColor = System.Drawing.Color.Black;
             this.CloseButton.Location = new System.Drawing.Point(454, 113);
             this.CloseButton.Name = "CloseButton";

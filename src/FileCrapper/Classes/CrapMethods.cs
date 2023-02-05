@@ -21,7 +21,6 @@ namespace FileCrapper.Classes {
             byte[] newByt = new byte[] { (byte)Program.Random.Next(1, 255) };
             fs.Write(newByt, 0, newByt.Length);
             fs.Flush();
-            Console.WriteLine("Position %a has been modified.".Replace("%a", fs.Position.ToString()));
             return newByt.LongLength;
         }
 
@@ -32,7 +31,6 @@ namespace FileCrapper.Classes {
         internal static long NullifyByte(FileStream fs) {
             fs.Write(nullByte, 0, nullByte.Length);
             fs.Flush();
-            Console.WriteLine("Position %a has been nullified.".Replace("%a", fs.Position.ToString()));
             return nullByte.LongLength;
         }
 
@@ -71,7 +69,6 @@ namespace FileCrapper.Classes {
             Array.Clear(firstByte, 0, firstByte.Length);
             Array.Clear(secByte, 0, secByte.Length);
 
-            Console.WriteLine("Position " + lastKnownPos1 + " and " + lastKnownPos2 + " has been swapped.");
             return len;
         }
 
@@ -90,7 +87,6 @@ namespace FileCrapper.Classes {
                 nextPos = startingpoint;
             }
             f.Seek(nextPos, SeekOrigin.Begin);
-            Console.WriteLine("Position has been set to byte %a".Replace("%a", f.Position.ToString()));
         }
     }
 }

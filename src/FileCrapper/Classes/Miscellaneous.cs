@@ -10,14 +10,14 @@ using System.Windows.Forms;
 namespace FileCrapper.Classes {
 
     /// <summary>
-    /// A static class containing miscellaneous things.
+    /// A static class containing miscellaneous methods.
     /// </summary>
     internal static class Miscellaneous {
 
         /// <summary>
         /// Checks if the running instance of the program, has an administrative privilege.
         /// </summary>
-        /// <returns>Returns true, if it has an admin privilege; otherwise false.</returns>
+        /// <returns>Returns true,\ if it has an admin privilege; otherwise false.</returns>
         internal static bool IsInAdminMode() {
             return new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
         }
@@ -40,41 +40,6 @@ namespace FileCrapper.Classes {
         /// <returns>'true' if the process of the same name, exists.</returns>
         internal static bool IsOneInstance() {
             return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length == 1;
-        }
-
-        /// <summary>
-        /// Get files from the directory.
-        /// </summary>
-        /// <param name="DirectoryPath">The directory path.</param>
-        /// <param name="recursion">'true' to get files from its subdirectories.</param>
-        /// <param name="_token">A current <see cref="CancellationToken"/> object.</param>
-        /// <returns>Returns an array of <see cref="FileInfo"/>.</returns>
-        internal static FileInfo[] GetFilesFromDirectories(string DirectoryPath, bool recursion, CancellationToken _token) {
-            DirectoryInfo dir = new DirectoryInfo(DirectoryPath);
-            List<FileInfo> f = new List<FileInfo>();
-            try {
-                FileInfo[] enumF = dir.EnumerateFiles().ToArray();
-                for (int i = 0; i < enumF.Length; i++) {
-                    if (_token.IsCancellationRequested)
-                        break;
-                    f.Add(enumF[i]);
-                }
-            } catch {
-                // Ignore this error.
-            }
-
-            if (recursion) {
-                try {
-                    foreach (DirectoryInfo d in dir.EnumerateDirectories()) {
-                        if (_token.IsCancellationRequested)
-                            break;
-                        f.AddRange(GetFilesFromDirectories(d.FullName, recursion, _token));
-                    }
-                } catch {
-                    // Ignore this error.
-                }
-            }
-            return f.ToArray();
         }
 
         /// <summary>
@@ -102,32 +67,31 @@ namespace FileCrapper.Classes {
         }
 
         /// <summary>
-        ///     ''' Calculate the bytes of the image.
-        ///     ''' </summary>
-        ///     ''' <param name="byt">The length of the image.</param>
-        ///     ''' <returns>Returns the String format.</returns>
-        ///     ''' <remarks></remarks>
+        /// Calculate the bytes of a file and convert into human-readable bytes.
+        /// </summary>
+        /// <param name="byt">The length size of a file.</param>
+        /// <returns>Returns the human-readable size format.</returns>
         internal static string CalculateBytes(long byt) {
             double DoubleBytes;
             try {
                 switch (byt) {
                     case long n when byt >= 1099511627776: {
-                        DoubleBytes = System.Convert.ToDouble(byt / (double)1099511627776);
+                        DoubleBytes = Convert.ToDouble(byt / (double)1099511627776);
                         return Math.Round(DoubleBytes, 2).ToString() + " TB";
                     }
 
                     case long n when 1073741824 <= byt && byt <= 1099511627775: {
-                        DoubleBytes = System.Convert.ToDouble(byt / (double)1073741824);
+                        DoubleBytes = Convert.ToDouble(byt / (double)1073741824);
                         return Math.Round(DoubleBytes, 2).ToString() + " GB";
                     }
 
                     case long n when 1048576 <= byt && byt <= 1073741823: {
-                        DoubleBytes = System.Convert.ToDouble(byt / (double)1048576);
+                        DoubleBytes = Convert.ToDouble(byt / (double)1048576);
                         return Math.Round(DoubleBytes, 2).ToString() + " MB";
                     }
 
                     case long n when 1024 <= byt && byt <= 1048575: {
-                        DoubleBytes = System.Convert.ToDouble(byt / (double)1024);
+                        DoubleBytes = Convert.ToDouble(byt / (double)1024);
                         return Math.Round(DoubleBytes, 2).ToString() + " KB";
                     }
 

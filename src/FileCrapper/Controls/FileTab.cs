@@ -3,6 +3,10 @@ using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace FileCrapper.Controls {
+
+    /// <summary>
+    /// A control that shows information of an object from <see cref="FileCrapper.Classes.FileObject"/>.
+    /// </summary>
     public partial class FileTab : UserControl {
         public FileTab() {
             InitializeComponent();

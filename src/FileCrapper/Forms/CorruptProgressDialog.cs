@@ -53,6 +53,8 @@ namespace FileCrapper.Forms {
                 stopwatch.Stop();
                 label1.Text = "File Corruption Succeed! (Avg. Damage: "+percentage.ToString()+"%)";
                 label2.Text = Miscellaneous.CalculateBytes(bytDamage) + " of all files' contents were damaged.";
+                CloseButton.Enabled = true;
+                Text = "File Corruption Success";
                 isFinished = true;
             }));
         }
@@ -64,10 +66,10 @@ namespace FileCrapper.Forms {
                 progressBar1.Value = current;
                 TimeSpan ts = Miscellaneous.GetETA(stopwatch.Elapsed, current, total);
                 String timeLeft = ts.Seconds.ToString() + " second/s left.";
-                if (ts.Minutes > 0 || ts.Hours > 0 || ts.Days > 0) timeLeft = " and " + timeLeft;
-                if (ts.Minutes > 0) timeLeft = ts.Minutes.ToString() + " minute/s" + timeLeft;
-                if (ts.Hours > 0) timeLeft = ts.Hours.ToString() + " hour/s" + timeLeft;
-                if (ts.Days > 0) timeLeft = ts.Days.ToString() + " day/s" + timeLeft;
+                if (ts.Minutes > 0 || ts.Hours > 0 || ts.Days > 0) timeLeft = "and " + timeLeft;
+                if (ts.Minutes > 0) timeLeft = ts.Minutes.ToString() + " minute/s, " + timeLeft;
+                if (ts.Hours > 0) timeLeft = ts.Hours.ToString() + " hour/s, " + timeLeft;
+                if (ts.Days > 0) timeLeft = ts.Days.ToString() + " day/s, " + timeLeft;
                 label2.Text = timeLeft;
             }));
         }

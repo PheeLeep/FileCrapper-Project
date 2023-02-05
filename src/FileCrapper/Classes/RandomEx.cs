@@ -6,7 +6,7 @@ namespace FileCrapper.Classes {
     /// An extension class for the <see cref="Random"/>
     /// </summary>
     /// <remarks>
-    /// Code taken from https://stackoverflow.com/a/13095144 | Author: BlueRaja - Danny Pflughoeft 
+    /// Code taken from https://stackoverflow.com/a/13095144 | Author: BlueRaja - Danny Pflughoeft | Date Published: 26/10/2012 | Latest Date Edited: 28/8/2017
     /// </remarks>
     public static class RandomEx {
 

@@ -2,8 +2,9 @@
 using FileCrapper.Controls;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Threading;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FileCrapper.Forms {
     public partial class MainForm : Form {
@@ -11,12 +12,52 @@ namespace FileCrapper.Forms {
         private bool isKeyDown = false;
         private int currentPage = 1;
         private int maxPage = 1;
-
+        private readonly object locker = new object();
+        private Thread t = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        private static List<string> queueStrings = new List<string>();
+        private bool listInUse = false;
         public MainForm() {
             InitializeComponent();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
+        internal void LoadPathToQueue(string cmdline) {
+            lock (locker) {
+                while (listInUse) {/**/ }
+                listInUse = true;
+                if (!queueStrings.Contains(cmdline)) queueStrings.Add(cmdline);
+                listInUse = false;
+            }
+            if (t == null) {
+                t = new Thread(() => {
+                    bool isInit = false;
+                    while (!isInit) {
+                        if (IsHandleCreated) isInit = true;
+                        Thread.Sleep(100);
+                    }
+                    while (queueStrings.Count > 0) {
+                        while (FileObjectsHandler.Status != FileObjectsHandler.StatusE.Ready || listInUse) {
+                            Thread.Sleep(100);
+                        }
+
+                        listInUse = true;
+                        string path = queueStrings[0];
+                        queueStrings.RemoveAt(0);
+                        listInUse = false;
+                        if (File.Exists(path)) {
+                            FileObjectsHandler.AddItems(new string[] { path });
+                        } else if (Directory.Exists(path)) {
+                            FileObjectsHandler.AddItemsFromDirectory(path, SettingsClass.SubfolderRecursion);
+                        }
+                    }
+                    t = null;
+                });
+                t.Start();
+            }
+        }
         protected override CreateParams CreateParams {
             get {
                 // Minimize form and control flickering.
@@ -148,7 +189,7 @@ namespace FileCrapper.Forms {
 
         private void addFromFolderToolStripMenuItem_Click(object sender, EventArgs e) {
             if (AddFolderDialog.ShowDialog() == DialogResult.OK)
-                FileObjectsHandler.AddItemsFromDirectory(AddFolderDialog.SelectedPath, SettingsClass.SubfolderRecursion);
+                FileObjectsHandler.AddItemsFromDirectory(AddFolderDialog.SelectedPath\);
         }
 
         private void TickAllButton_Click(object sender, EventArgs e) {
