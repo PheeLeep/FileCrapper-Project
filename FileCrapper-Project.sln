@@ -14,22 +14,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots"
 		screenshots\Sample3.png = screenshots\Sample3.png
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FileCrapper-Installer", "src\FileCrapper-Installer\FileCrapper-Installer.vdproj", "{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Debug|x86.Build.0 = Debug|Any CPU
 		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Release|x86.ActiveCfg = Release|Any CPU
+		{38A9212C-4523-4590-ABA8-FCDA8783DA79}.Release|x86.Build.0 = Release|Any CPU
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}.Debug|Any CPU.ActiveCfg = Debug
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}.Debug|x86.ActiveCfg = Debug
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}.Release|Any CPU.ActiveCfg = Release
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}.Release|Any CPU.Build.0 = Release
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{38A9212C-4523-4590-ABA8-FCDA8783DA79} = {04F9D8F0-C080-4A22-BDF5-D8BCA0A13DAE}
+		{573271EE-193A-4F05-A8EA-5BB6E7A53FE3} = {04F9D8F0-C080-4A22-BDF5-D8BCA0A13DAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {38BFF0F8-5ABE-475F-BE71-A973ED52CDBA}

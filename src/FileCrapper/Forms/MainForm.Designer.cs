@@ -54,6 +54,56 @@
             this.StagePanel = new System.Windows.Forms.Panel();
             this.ItemsManPanel = new System.Windows.Forms.Panel();
             this.ListsPanel = new System.Windows.Forms.Panel();
+            this.fileTab50 = new FileCrapper.Controls.FileTab();
+            this.fileTab49 = new FileCrapper.Controls.FileTab();
+            this.fileTab48 = new FileCrapper.Controls.FileTab();
+            this.fileTab47 = new FileCrapper.Controls.FileTab();
+            this.fileTab46 = new FileCrapper.Controls.FileTab();
+            this.fileTab45 = new FileCrapper.Controls.FileTab();
+            this.fileTab44 = new FileCrapper.Controls.FileTab();
+            this.fileTab43 = new FileCrapper.Controls.FileTab();
+            this.fileTab42 = new FileCrapper.Controls.FileTab();
+            this.fileTab41 = new FileCrapper.Controls.FileTab();
+            this.fileTab40 = new FileCrapper.Controls.FileTab();
+            this.fileTab39 = new FileCrapper.Controls.FileTab();
+            this.fileTab38 = new FileCrapper.Controls.FileTab();
+            this.fileTab37 = new FileCrapper.Controls.FileTab();
+            this.fileTab36 = new FileCrapper.Controls.FileTab();
+            this.fileTab35 = new FileCrapper.Controls.FileTab();
+            this.fileTab34 = new FileCrapper.Controls.FileTab();
+            this.fileTab33 = new FileCrapper.Controls.FileTab();
+            this.fileTab32 = new FileCrapper.Controls.FileTab();
+            this.fileTab31 = new FileCrapper.Controls.FileTab();
+            this.fileTab30 = new FileCrapper.Controls.FileTab();
+            this.fileTab29 = new FileCrapper.Controls.FileTab();
+            this.fileTab28 = new FileCrapper.Controls.FileTab();
+            this.fileTab27 = new FileCrapper.Controls.FileTab();
+            this.fileTab26 = new FileCrapper.Controls.FileTab();
+            this.fileTab25 = new FileCrapper.Controls.FileTab();
+            this.fileTab24 = new FileCrapper.Controls.FileTab();
+            this.fileTab23 = new FileCrapper.Controls.FileTab();
+            this.fileTab22 = new FileCrapper.Controls.FileTab();
+            this.fileTab21 = new FileCrapper.Controls.FileTab();
+            this.fileTab20 = new FileCrapper.Controls.FileTab();
+            this.fileTab19 = new FileCrapper.Controls.FileTab();
+            this.fileTab18 = new FileCrapper.Controls.FileTab();
+            this.fileTab17 = new FileCrapper.Controls.FileTab();
+            this.fileTab16 = new FileCrapper.Controls.FileTab();
+            this.fileTab15 = new FileCrapper.Controls.FileTab();
+            this.fileTab14 = new FileCrapper.Controls.FileTab();
+            this.fileTab13 = new FileCrapper.Controls.FileTab();
+            this.fileTab12 = new FileCrapper.Controls.FileTab();
+            this.fileTab11 = new FileCrapper.Controls.FileTab();
+            this.fileTab10 = new FileCrapper.Controls.FileTab();
+            this.fileTab9 = new FileCrapper.Controls.FileTab();
+            this.fileTab8 = new FileCrapper.Controls.FileTab();
+            this.fileTab7 = new FileCrapper.Controls.FileTab();
+            this.fileTab6 = new FileCrapper.Controls.FileTab();
+            this.fileTab5 = new FileCrapper.Controls.FileTab();
+            this.fileTab4 = new FileCrapper.Controls.FileTab();
+            this.fileTab3 = new FileCrapper.Controls.FileTab();
+            this.fileTab2 = new FileCrapper.Controls.FileTab();
+            this.fileTab1 = new FileCrapper.Controls.FileTab();
             this.PageManagementPanel = new System.Windows.Forms.Panel();
             this.MoveLastPageButton = new System.Windows.Forms.Button();
             this.MoveNextPageButton = new System.Windows.Forms.Button();
@@ -64,56 +114,6 @@
             this.MovePreviousPageButton = new System.Windows.Forms.Button();
             this.MoveFirstPageButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.fileTab2 = new FileCrapper.Controls.FileTab();
-            this.fileTab3 = new FileCrapper.Controls.FileTab();
-            this.fileTab4 = new FileCrapper.Controls.FileTab();
-            this.fileTab5 = new FileCrapper.Controls.FileTab();
-            this.fileTab6 = new FileCrapper.Controls.FileTab();
-            this.fileTab7 = new FileCrapper.Controls.FileTab();
-            this.fileTab8 = new FileCrapper.Controls.FileTab();
-            this.fileTab9 = new FileCrapper.Controls.FileTab();
-            this.fileTab10 = new FileCrapper.Controls.FileTab();
-            this.fileTab11 = new FileCrapper.Controls.FileTab();
-            this.fileTab12 = new FileCrapper.Controls.FileTab();
-            this.fileTab13 = new FileCrapper.Controls.FileTab();
-            this.fileTab14 = new FileCrapper.Controls.FileTab();
-            this.fileTab15 = new FileCrapper.Controls.FileTab();
-            this.fileTab16 = new FileCrapper.Controls.FileTab();
-            this.fileTab17 = new FileCrapper.Controls.FileTab();
-            this.fileTab18 = new FileCrapper.Controls.FileTab();
-            this.fileTab19 = new FileCrapper.Controls.FileTab();
-            this.fileTab20 = new FileCrapper.Controls.FileTab();
-            this.fileTab21 = new FileCrapper.Controls.FileTab();
-            this.fileTab22 = new FileCrapper.Controls.FileTab();
-            this.fileTab23 = new FileCrapper.Controls.FileTab();
-            this.fileTab24 = new FileCrapper.Controls.FileTab();
-            this.fileTab25 = new FileCrapper.Controls.FileTab();
-            this.fileTab26 = new FileCrapper.Controls.FileTab();
-            this.fileTab27 = new FileCrapper.Controls.FileTab();
-            this.fileTab28 = new FileCrapper.Controls.FileTab();
-            this.fileTab29 = new FileCrapper.Controls.FileTab();
-            this.fileTab30 = new FileCrapper.Controls.FileTab();
-            this.fileTab31 = new FileCrapper.Controls.FileTab();
-            this.fileTab32 = new FileCrapper.Controls.FileTab();
-            this.fileTab33 = new FileCrapper.Controls.FileTab();
-            this.fileTab34 = new FileCrapper.Controls.FileTab();
-            this.fileTab35 = new FileCrapper.Controls.FileTab();
-            this.fileTab36 = new FileCrapper.Controls.FileTab();
-            this.fileTab37 = new FileCrapper.Controls.FileTab();
-            this.fileTab38 = new FileCrapper.Controls.FileTab();
-            this.fileTab39 = new FileCrapper.Controls.FileTab();
-            this.fileTab40 = new FileCrapper.Controls.FileTab();
-            this.fileTab41 = new FileCrapper.Controls.FileTab();
-            this.fileTab42 = new FileCrapper.Controls.FileTab();
-            this.fileTab43 = new FileCrapper.Controls.FileTab();
-            this.fileTab44 = new FileCrapper.Controls.FileTab();
-            this.fileTab45 = new FileCrapper.Controls.FileTab();
-            this.fileTab46 = new FileCrapper.Controls.FileTab();
-            this.fileTab47 = new FileCrapper.Controls.FileTab();
-            this.fileTab48 = new FileCrapper.Controls.FileTab();
-            this.fileTab49 = new FileCrapper.Controls.FileTab();
-            this.fileTab50 = new FileCrapper.Controls.FileTab();
-            this.fileTab1 = new FileCrapper.Controls.FileTab();
             this.listViewContextMenu.SuspendLayout();
             this.MenuPanel.SuspendLayout();
             this.EmptyItemsPanel.SuspendLayout();
@@ -334,6 +334,8 @@
             this.EmptyItemsPanel.Name = "EmptyItemsPanel";
             this.EmptyItemsPanel.Size = new System.Drawing.Size(788, 385);
             this.EmptyItemsPanel.TabIndex = 2;
+            this.EmptyItemsPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormDragDrop);
+            this.EmptyItemsPanel.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormDragEnter);
             // 
             // iconBox
             // 
@@ -345,6 +347,8 @@
             this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconBox.TabIndex = 3;
             this.iconBox.TabStop = false;
+            this.iconBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormDragDrop);
+            this.iconBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormDragEnter);
             // 
             // NoFilesLabel
             // 
@@ -358,6 +362,8 @@
             this.NoFilesLabel.TabIndex = 2;
             this.NoFilesLabel.Text = "...";
             this.NoFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NoFilesLabel.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormDragDrop);
+            this.NoFilesLabel.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormDragEnter);
             // 
             // AddObjectsCMS
             // 
@@ -465,6 +471,456 @@
             this.ListsPanel.Name = "ListsPanel";
             this.ListsPanel.Size = new System.Drawing.Size(788, 353);
             this.ListsPanel.TabIndex = 5;
+            // 
+            // fileTab50
+            // 
+            this.fileTab50.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab50.Location = new System.Drawing.Point(0, 2891);
+            this.fileTab50.Name = "fileTab50";
+            this.fileTab50.Size = new System.Drawing.Size(767, 59);
+            this.fileTab50.TabIndex = 49;
+            this.fileTab50.Visible = false;
+            // 
+            // fileTab49
+            // 
+            this.fileTab49.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab49.Location = new System.Drawing.Point(0, 2832);
+            this.fileTab49.Name = "fileTab49";
+            this.fileTab49.Size = new System.Drawing.Size(767, 59);
+            this.fileTab49.TabIndex = 48;
+            this.fileTab49.Visible = false;
+            // 
+            // fileTab48
+            // 
+            this.fileTab48.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab48.Location = new System.Drawing.Point(0, 2773);
+            this.fileTab48.Name = "fileTab48";
+            this.fileTab48.Size = new System.Drawing.Size(767, 59);
+            this.fileTab48.TabIndex = 47;
+            this.fileTab48.Visible = false;
+            // 
+            // fileTab47
+            // 
+            this.fileTab47.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab47.Location = new System.Drawing.Point(0, 2714);
+            this.fileTab47.Name = "fileTab47";
+            this.fileTab47.Size = new System.Drawing.Size(767, 59);
+            this.fileTab47.TabIndex = 46;
+            this.fileTab47.Visible = false;
+            // 
+            // fileTab46
+            // 
+            this.fileTab46.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab46.Location = new System.Drawing.Point(0, 2655);
+            this.fileTab46.Name = "fileTab46";
+            this.fileTab46.Size = new System.Drawing.Size(767, 59);
+            this.fileTab46.TabIndex = 45;
+            this.fileTab46.Visible = false;
+            // 
+            // fileTab45
+            // 
+            this.fileTab45.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab45.Location = new System.Drawing.Point(0, 2596);
+            this.fileTab45.Name = "fileTab45";
+            this.fileTab45.Size = new System.Drawing.Size(767, 59);
+            this.fileTab45.TabIndex = 44;
+            this.fileTab45.Visible = false;
+            // 
+            // fileTab44
+            // 
+            this.fileTab44.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab44.Location = new System.Drawing.Point(0, 2537);
+            this.fileTab44.Name = "fileTab44";
+            this.fileTab44.Size = new System.Drawing.Size(767, 59);
+            this.fileTab44.TabIndex = 43;
+            this.fileTab44.Visible = false;
+            // 
+            // fileTab43
+            // 
+            this.fileTab43.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab43.Location = new System.Drawing.Point(0, 2478);
+            this.fileTab43.Name = "fileTab43";
+            this.fileTab43.Size = new System.Drawing.Size(767, 59);
+            this.fileTab43.TabIndex = 42;
+            this.fileTab43.Visible = false;
+            // 
+            // fileTab42
+            // 
+            this.fileTab42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab42.Location = new System.Drawing.Point(0, 2419);
+            this.fileTab42.Name = "fileTab42";
+            this.fileTab42.Size = new System.Drawing.Size(767, 59);
+            this.fileTab42.TabIndex = 41;
+            this.fileTab42.Visible = false;
+            // 
+            // fileTab41
+            // 
+            this.fileTab41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab41.Location = new System.Drawing.Point(0, 2360);
+            this.fileTab41.Name = "fileTab41";
+            this.fileTab41.Size = new System.Drawing.Size(767, 59);
+            this.fileTab41.TabIndex = 40;
+            this.fileTab41.Visible = false;
+            // 
+            // fileTab40
+            // 
+            this.fileTab40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab40.Location = new System.Drawing.Point(0, 2301);
+            this.fileTab40.Name = "fileTab40";
+            this.fileTab40.Size = new System.Drawing.Size(767, 59);
+            this.fileTab40.TabIndex = 39;
+            this.fileTab40.Visible = false;
+            // 
+            // fileTab39
+            // 
+            this.fileTab39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab39.Location = new System.Drawing.Point(0, 2242);
+            this.fileTab39.Name = "fileTab39";
+            this.fileTab39.Size = new System.Drawing.Size(767, 59);
+            this.fileTab39.TabIndex = 38;
+            this.fileTab39.Visible = false;
+            // 
+            // fileTab38
+            // 
+            this.fileTab38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab38.Location = new System.Drawing.Point(0, 2183);
+            this.fileTab38.Name = "fileTab38";
+            this.fileTab38.Size = new System.Drawing.Size(767, 59);
+            this.fileTab38.TabIndex = 37;
+            this.fileTab38.Visible = false;
+            // 
+            // fileTab37
+            // 
+            this.fileTab37.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab37.Location = new System.Drawing.Point(0, 2124);
+            this.fileTab37.Name = "fileTab37";
+            this.fileTab37.Size = new System.Drawing.Size(767, 59);
+            this.fileTab37.TabIndex = 36;
+            this.fileTab37.Visible = false;
+            // 
+            // fileTab36
+            // 
+            this.fileTab36.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab36.Location = new System.Drawing.Point(0, 2065);
+            this.fileTab36.Name = "fileTab36";
+            this.fileTab36.Size = new System.Drawing.Size(767, 59);
+            this.fileTab36.TabIndex = 35;
+            this.fileTab36.Visible = false;
+            // 
+            // fileTab35
+            // 
+            this.fileTab35.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab35.Location = new System.Drawing.Point(0, 2006);
+            this.fileTab35.Name = "fileTab35";
+            this.fileTab35.Size = new System.Drawing.Size(767, 59);
+            this.fileTab35.TabIndex = 34;
+            this.fileTab35.Visible = false;
+            // 
+            // fileTab34
+            // 
+            this.fileTab34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab34.Location = new System.Drawing.Point(0, 1947);
+            this.fileTab34.Name = "fileTab34";
+            this.fileTab34.Size = new System.Drawing.Size(767, 59);
+            this.fileTab34.TabIndex = 33;
+            this.fileTab34.Visible = false;
+            // 
+            // fileTab33
+            // 
+            this.fileTab33.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab33.Location = new System.Drawing.Point(0, 1888);
+            this.fileTab33.Name = "fileTab33";
+            this.fileTab33.Size = new System.Drawing.Size(767, 59);
+            this.fileTab33.TabIndex = 32;
+            this.fileTab33.Visible = false;
+            // 
+            // fileTab32
+            // 
+            this.fileTab32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab32.Location = new System.Drawing.Point(0, 1829);
+            this.fileTab32.Name = "fileTab32";
+            this.fileTab32.Size = new System.Drawing.Size(767, 59);
+            this.fileTab32.TabIndex = 31;
+            this.fileTab32.Visible = false;
+            // 
+            // fileTab31
+            // 
+            this.fileTab31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab31.Location = new System.Drawing.Point(0, 1770);
+            this.fileTab31.Name = "fileTab31";
+            this.fileTab31.Size = new System.Drawing.Size(767, 59);
+            this.fileTab31.TabIndex = 30;
+            this.fileTab31.Visible = false;
+            // 
+            // fileTab30
+            // 
+            this.fileTab30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab30.Location = new System.Drawing.Point(0, 1711);
+            this.fileTab30.Name = "fileTab30";
+            this.fileTab30.Size = new System.Drawing.Size(767, 59);
+            this.fileTab30.TabIndex = 29;
+            this.fileTab30.Visible = false;
+            // 
+            // fileTab29
+            // 
+            this.fileTab29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab29.Location = new System.Drawing.Point(0, 1652);
+            this.fileTab29.Name = "fileTab29";
+            this.fileTab29.Size = new System.Drawing.Size(767, 59);
+            this.fileTab29.TabIndex = 28;
+            this.fileTab29.Visible = false;
+            // 
+            // fileTab28
+            // 
+            this.fileTab28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab28.Location = new System.Drawing.Point(0, 1593);
+            this.fileTab28.Name = "fileTab28";
+            this.fileTab28.Size = new System.Drawing.Size(767, 59);
+            this.fileTab28.TabIndex = 27;
+            this.fileTab28.Visible = false;
+            // 
+            // fileTab27
+            // 
+            this.fileTab27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab27.Location = new System.Drawing.Point(0, 1534);
+            this.fileTab27.Name = "fileTab27";
+            this.fileTab27.Size = new System.Drawing.Size(767, 59);
+            this.fileTab27.TabIndex = 26;
+            this.fileTab27.Visible = false;
+            // 
+            // fileTab26
+            // 
+            this.fileTab26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab26.Location = new System.Drawing.Point(0, 1475);
+            this.fileTab26.Name = "fileTab26";
+            this.fileTab26.Size = new System.Drawing.Size(767, 59);
+            this.fileTab26.TabIndex = 25;
+            this.fileTab26.Visible = false;
+            // 
+            // fileTab25
+            // 
+            this.fileTab25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab25.Location = new System.Drawing.Point(0, 1416);
+            this.fileTab25.Name = "fileTab25";
+            this.fileTab25.Size = new System.Drawing.Size(767, 59);
+            this.fileTab25.TabIndex = 24;
+            this.fileTab25.Visible = false;
+            // 
+            // fileTab24
+            // 
+            this.fileTab24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab24.Location = new System.Drawing.Point(0, 1357);
+            this.fileTab24.Name = "fileTab24";
+            this.fileTab24.Size = new System.Drawing.Size(767, 59);
+            this.fileTab24.TabIndex = 23;
+            this.fileTab24.Visible = false;
+            // 
+            // fileTab23
+            // 
+            this.fileTab23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab23.Location = new System.Drawing.Point(0, 1298);
+            this.fileTab23.Name = "fileTab23";
+            this.fileTab23.Size = new System.Drawing.Size(767, 59);
+            this.fileTab23.TabIndex = 22;
+            this.fileTab23.Visible = false;
+            // 
+            // fileTab22
+            // 
+            this.fileTab22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab22.Location = new System.Drawing.Point(0, 1239);
+            this.fileTab22.Name = "fileTab22";
+            this.fileTab22.Size = new System.Drawing.Size(767, 59);
+            this.fileTab22.TabIndex = 21;
+            this.fileTab22.Visible = false;
+            // 
+            // fileTab21
+            // 
+            this.fileTab21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab21.Location = new System.Drawing.Point(0, 1180);
+            this.fileTab21.Name = "fileTab21";
+            this.fileTab21.Size = new System.Drawing.Size(767, 59);
+            this.fileTab21.TabIndex = 20;
+            this.fileTab21.Visible = false;
+            // 
+            // fileTab20
+            // 
+            this.fileTab20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab20.Location = new System.Drawing.Point(0, 1121);
+            this.fileTab20.Name = "fileTab20";
+            this.fileTab20.Size = new System.Drawing.Size(767, 59);
+            this.fileTab20.TabIndex = 19;
+            this.fileTab20.Visible = false;
+            // 
+            // fileTab19
+            // 
+            this.fileTab19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab19.Location = new System.Drawing.Point(0, 1062);
+            this.fileTab19.Name = "fileTab19";
+            this.fileTab19.Size = new System.Drawing.Size(767, 59);
+            this.fileTab19.TabIndex = 18;
+            this.fileTab19.Visible = false;
+            // 
+            // fileTab18
+            // 
+            this.fileTab18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab18.Location = new System.Drawing.Point(0, 1003);
+            this.fileTab18.Name = "fileTab18";
+            this.fileTab18.Size = new System.Drawing.Size(767, 59);
+            this.fileTab18.TabIndex = 17;
+            this.fileTab18.Visible = false;
+            // 
+            // fileTab17
+            // 
+            this.fileTab17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab17.Location = new System.Drawing.Point(0, 944);
+            this.fileTab17.Name = "fileTab17";
+            this.fileTab17.Size = new System.Drawing.Size(767, 59);
+            this.fileTab17.TabIndex = 16;
+            this.fileTab17.Visible = false;
+            // 
+            // fileTab16
+            // 
+            this.fileTab16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab16.Location = new System.Drawing.Point(0, 885);
+            this.fileTab16.Name = "fileTab16";
+            this.fileTab16.Size = new System.Drawing.Size(767, 59);
+            this.fileTab16.TabIndex = 15;
+            this.fileTab16.Visible = false;
+            // 
+            // fileTab15
+            // 
+            this.fileTab15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab15.Location = new System.Drawing.Point(0, 826);
+            this.fileTab15.Name = "fileTab15";
+            this.fileTab15.Size = new System.Drawing.Size(767, 59);
+            this.fileTab15.TabIndex = 14;
+            this.fileTab15.Visible = false;
+            // 
+            // fileTab14
+            // 
+            this.fileTab14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab14.Location = new System.Drawing.Point(0, 767);
+            this.fileTab14.Name = "fileTab14";
+            this.fileTab14.Size = new System.Drawing.Size(767, 59);
+            this.fileTab14.TabIndex = 13;
+            this.fileTab14.Visible = false;
+            // 
+            // fileTab13
+            // 
+            this.fileTab13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab13.Location = new System.Drawing.Point(0, 708);
+            this.fileTab13.Name = "fileTab13";
+            this.fileTab13.Size = new System.Drawing.Size(767, 59);
+            this.fileTab13.TabIndex = 12;
+            this.fileTab13.Visible = false;
+            // 
+            // fileTab12
+            // 
+            this.fileTab12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab12.Location = new System.Drawing.Point(0, 649);
+            this.fileTab12.Name = "fileTab12";
+            this.fileTab12.Size = new System.Drawing.Size(767, 59);
+            this.fileTab12.TabIndex = 11;
+            this.fileTab12.Visible = false;
+            // 
+            // fileTab11
+            // 
+            this.fileTab11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab11.Location = new System.Drawing.Point(0, 590);
+            this.fileTab11.Name = "fileTab11";
+            this.fileTab11.Size = new System.Drawing.Size(767, 59);
+            this.fileTab11.TabIndex = 10;
+            this.fileTab11.Visible = false;
+            // 
+            // fileTab10
+            // 
+            this.fileTab10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab10.Location = new System.Drawing.Point(0, 531);
+            this.fileTab10.Name = "fileTab10";
+            this.fileTab10.Size = new System.Drawing.Size(767, 59);
+            this.fileTab10.TabIndex = 9;
+            this.fileTab10.Visible = false;
+            // 
+            // fileTab9
+            // 
+            this.fileTab9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab9.Location = new System.Drawing.Point(0, 472);
+            this.fileTab9.Name = "fileTab9";
+            this.fileTab9.Size = new System.Drawing.Size(767, 59);
+            this.fileTab9.TabIndex = 8;
+            this.fileTab9.Visible = false;
+            // 
+            // fileTab8
+            // 
+            this.fileTab8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab8.Location = new System.Drawing.Point(0, 413);
+            this.fileTab8.Name = "fileTab8";
+            this.fileTab8.Size = new System.Drawing.Size(767, 59);
+            this.fileTab8.TabIndex = 7;
+            this.fileTab8.Visible = false;
+            // 
+            // fileTab7
+            // 
+            this.fileTab7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab7.Location = new System.Drawing.Point(0, 354);
+            this.fileTab7.Name = "fileTab7";
+            this.fileTab7.Size = new System.Drawing.Size(767, 59);
+            this.fileTab7.TabIndex = 6;
+            this.fileTab7.Visible = false;
+            // 
+            // fileTab6
+            // 
+            this.fileTab6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab6.Location = new System.Drawing.Point(0, 295);
+            this.fileTab6.Name = "fileTab6";
+            this.fileTab6.Size = new System.Drawing.Size(767, 59);
+            this.fileTab6.TabIndex = 5;
+            this.fileTab6.Visible = false;
+            // 
+            // fileTab5
+            // 
+            this.fileTab5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab5.Location = new System.Drawing.Point(0, 236);
+            this.fileTab5.Name = "fileTab5";
+            this.fileTab5.Size = new System.Drawing.Size(767, 59);
+            this.fileTab5.TabIndex = 4;
+            this.fileTab5.Visible = false;
+            // 
+            // fileTab4
+            // 
+            this.fileTab4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab4.Location = new System.Drawing.Point(0, 177);
+            this.fileTab4.Name = "fileTab4";
+            this.fileTab4.Size = new System.Drawing.Size(767, 59);
+            this.fileTab4.TabIndex = 3;
+            this.fileTab4.Visible = false;
+            // 
+            // fileTab3
+            // 
+            this.fileTab3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab3.Location = new System.Drawing.Point(0, 118);
+            this.fileTab3.Name = "fileTab3";
+            this.fileTab3.Size = new System.Drawing.Size(767, 59);
+            this.fileTab3.TabIndex = 2;
+            this.fileTab3.Visible = false;
+            // 
+            // fileTab2
+            // 
+            this.fileTab2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab2.Location = new System.Drawing.Point(0, 59);
+            this.fileTab2.Name = "fileTab2";
+            this.fileTab2.Size = new System.Drawing.Size(767, 59);
+            this.fileTab2.TabIndex = 1;
+            this.fileTab2.Visible = false;
+            // 
+            // fileTab1
+            // 
+            this.fileTab1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileTab1.Location = new System.Drawing.Point(0, 0);
+            this.fileTab1.Name = "fileTab1";
+            this.fileTab1.Size = new System.Drawing.Size(767, 59);
+            this.fileTab1.TabIndex = 0;
+            this.fileTab1.Visible = false;
             // 
             // PageManagementPanel
             // 
@@ -581,456 +1037,6 @@
             this.MoveFirstPageButton.UseVisualStyleBackColor = true;
             this.MoveFirstPageButton.Click += new System.EventHandler(this.MoveFirstPageButton_Click);
             // 
-            // fileTab2
-            // 
-            this.fileTab2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab2.Location = new System.Drawing.Point(0, 59);
-            this.fileTab2.Name = "fileTab2";
-            this.fileTab2.Size = new System.Drawing.Size(767, 59);
-            this.fileTab2.TabIndex = 1;
-            this.fileTab2.Visible = false;
-            // 
-            // fileTab3
-            // 
-            this.fileTab3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab3.Location = new System.Drawing.Point(0, 118);
-            this.fileTab3.Name = "fileTab3";
-            this.fileTab3.Size = new System.Drawing.Size(767, 59);
-            this.fileTab3.TabIndex = 2;
-            this.fileTab3.Visible = false;
-            // 
-            // fileTab4
-            // 
-            this.fileTab4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab4.Location = new System.Drawing.Point(0, 177);
-            this.fileTab4.Name = "fileTab4";
-            this.fileTab4.Size = new System.Drawing.Size(767, 59);
-            this.fileTab4.TabIndex = 3;
-            this.fileTab4.Visible = false;
-            // 
-            // fileTab5
-            // 
-            this.fileTab5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab5.Location = new System.Drawing.Point(0, 236);
-            this.fileTab5.Name = "fileTab5";
-            this.fileTab5.Size = new System.Drawing.Size(767, 59);
-            this.fileTab5.TabIndex = 4;
-            this.fileTab5.Visible = false;
-            // 
-            // fileTab6
-            // 
-            this.fileTab6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab6.Location = new System.Drawing.Point(0, 295);
-            this.fileTab6.Name = "fileTab6";
-            this.fileTab6.Size = new System.Drawing.Size(767, 59);
-            this.fileTab6.TabIndex = 5;
-            this.fileTab6.Visible = false;
-            // 
-            // fileTab7
-            // 
-            this.fileTab7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab7.Location = new System.Drawing.Point(0, 354);
-            this.fileTab7.Name = "fileTab7";
-            this.fileTab7.Size = new System.Drawing.Size(767, 59);
-            this.fileTab7.TabIndex = 6;
-            this.fileTab7.Visible = false;
-            // 
-            // fileTab8
-            // 
-            this.fileTab8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab8.Location = new System.Drawing.Point(0, 413);
-            this.fileTab8.Name = "fileTab8";
-            this.fileTab8.Size = new System.Drawing.Size(767, 59);
-            this.fileTab8.TabIndex = 7;
-            this.fileTab8.Visible = false;
-            // 
-            // fileTab9
-            // 
-            this.fileTab9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab9.Location = new System.Drawing.Point(0, 472);
-            this.fileTab9.Name = "fileTab9";
-            this.fileTab9.Size = new System.Drawing.Size(767, 59);
-            this.fileTab9.TabIndex = 8;
-            this.fileTab9.Visible = false;
-            // 
-            // fileTab10
-            // 
-            this.fileTab10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab10.Location = new System.Drawing.Point(0, 531);
-            this.fileTab10.Name = "fileTab10";
-            this.fileTab10.Size = new System.Drawing.Size(767, 59);
-            this.fileTab10.TabIndex = 9;
-            this.fileTab10.Visible = false;
-            // 
-            // fileTab11
-            // 
-            this.fileTab11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab11.Location = new System.Drawing.Point(0, 590);
-            this.fileTab11.Name = "fileTab11";
-            this.fileTab11.Size = new System.Drawing.Size(767, 59);
-            this.fileTab11.TabIndex = 10;
-            this.fileTab11.Visible = false;
-            // 
-            // fileTab12
-            // 
-            this.fileTab12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab12.Location = new System.Drawing.Point(0, 649);
-            this.fileTab12.Name = "fileTab12";
-            this.fileTab12.Size = new System.Drawing.Size(767, 59);
-            this.fileTab12.TabIndex = 11;
-            this.fileTab12.Visible = false;
-            // 
-            // fileTab13
-            // 
-            this.fileTab13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab13.Location = new System.Drawing.Point(0, 708);
-            this.fileTab13.Name = "fileTab13";
-            this.fileTab13.Size = new System.Drawing.Size(767, 59);
-            this.fileTab13.TabIndex = 12;
-            this.fileTab13.Visible = false;
-            // 
-            // fileTab14
-            // 
-            this.fileTab14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab14.Location = new System.Drawing.Point(0, 767);
-            this.fileTab14.Name = "fileTab14";
-            this.fileTab14.Size = new System.Drawing.Size(767, 59);
-            this.fileTab14.TabIndex = 13;
-            this.fileTab14.Visible = false;
-            // 
-            // fileTab15
-            // 
-            this.fileTab15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab15.Location = new System.Drawing.Point(0, 826);
-            this.fileTab15.Name = "fileTab15";
-            this.fileTab15.Size = new System.Drawing.Size(767, 59);
-            this.fileTab15.TabIndex = 14;
-            this.fileTab15.Visible = false;
-            // 
-            // fileTab16
-            // 
-            this.fileTab16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab16.Location = new System.Drawing.Point(0, 885);
-            this.fileTab16.Name = "fileTab16";
-            this.fileTab16.Size = new System.Drawing.Size(767, 59);
-            this.fileTab16.TabIndex = 15;
-            this.fileTab16.Visible = false;
-            // 
-            // fileTab17
-            // 
-            this.fileTab17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab17.Location = new System.Drawing.Point(0, 944);
-            this.fileTab17.Name = "fileTab17";
-            this.fileTab17.Size = new System.Drawing.Size(767, 59);
-            this.fileTab17.TabIndex = 16;
-            this.fileTab17.Visible = false;
-            // 
-            // fileTab18
-            // 
-            this.fileTab18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab18.Location = new System.Drawing.Point(0, 1003);
-            this.fileTab18.Name = "fileTab18";
-            this.fileTab18.Size = new System.Drawing.Size(767, 59);
-            this.fileTab18.TabIndex = 17;
-            this.fileTab18.Visible = false;
-            // 
-            // fileTab19
-            // 
-            this.fileTab19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab19.Location = new System.Drawing.Point(0, 1062);
-            this.fileTab19.Name = "fileTab19";
-            this.fileTab19.Size = new System.Drawing.Size(767, 59);
-            this.fileTab19.TabIndex = 18;
-            this.fileTab19.Visible = false;
-            // 
-            // fileTab20
-            // 
-            this.fileTab20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab20.Location = new System.Drawing.Point(0, 1121);
-            this.fileTab20.Name = "fileTab20";
-            this.fileTab20.Size = new System.Drawing.Size(767, 59);
-            this.fileTab20.TabIndex = 19;
-            this.fileTab20.Visible = false;
-            // 
-            // fileTab21
-            // 
-            this.fileTab21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab21.Location = new System.Drawing.Point(0, 1180);
-            this.fileTab21.Name = "fileTab21";
-            this.fileTab21.Size = new System.Drawing.Size(767, 59);
-            this.fileTab21.TabIndex = 20;
-            this.fileTab21.Visible = false;
-            // 
-            // fileTab22
-            // 
-            this.fileTab22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab22.Location = new System.Drawing.Point(0, 1239);
-            this.fileTab22.Name = "fileTab22";
-            this.fileTab22.Size = new System.Drawing.Size(767, 59);
-            this.fileTab22.TabIndex = 21;
-            this.fileTab22.Visible = false;
-            // 
-            // fileTab23
-            // 
-            this.fileTab23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab23.Location = new System.Drawing.Point(0, 1298);
-            this.fileTab23.Name = "fileTab23";
-            this.fileTab23.Size = new System.Drawing.Size(767, 59);
-            this.fileTab23.TabIndex = 22;
-            this.fileTab23.Visible = false;
-            // 
-            // fileTab24
-            // 
-            this.fileTab24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab24.Location = new System.Drawing.Point(0, 1357);
-            this.fileTab24.Name = "fileTab24";
-            this.fileTab24.Size = new System.Drawing.Size(767, 59);
-            this.fileTab24.TabIndex = 23;
-            this.fileTab24.Visible = false;
-            // 
-            // fileTab25
-            // 
-            this.fileTab25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab25.Location = new System.Drawing.Point(0, 1416);
-            this.fileTab25.Name = "fileTab25";
-            this.fileTab25.Size = new System.Drawing.Size(767, 59);
-            this.fileTab25.TabIndex = 24;
-            this.fileTab25.Visible = false;
-            // 
-            // fileTab26
-            // 
-            this.fileTab26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab26.Location = new System.Drawing.Point(0, 1475);
-            this.fileTab26.Name = "fileTab26";
-            this.fileTab26.Size = new System.Drawing.Size(767, 59);
-            this.fileTab26.TabIndex = 25;
-            this.fileTab26.Visible = false;
-            // 
-            // fileTab27
-            // 
-            this.fileTab27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab27.Location = new System.Drawing.Point(0, 1534);
-            this.fileTab27.Name = "fileTab27";
-            this.fileTab27.Size = new System.Drawing.Size(767, 59);
-            this.fileTab27.TabIndex = 26;
-            this.fileTab27.Visible = false;
-            // 
-            // fileTab28
-            // 
-            this.fileTab28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab28.Location = new System.Drawing.Point(0, 1593);
-            this.fileTab28.Name = "fileTab28";
-            this.fileTab28.Size = new System.Drawing.Size(767, 59);
-            this.fileTab28.TabIndex = 27;
-            this.fileTab28.Visible = false;
-            // 
-            // fileTab29
-            // 
-            this.fileTab29.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab29.Location = new System.Drawing.Point(0, 1652);
-            this.fileTab29.Name = "fileTab29";
-            this.fileTab29.Size = new System.Drawing.Size(767, 59);
-            this.fileTab29.TabIndex = 28;
-            this.fileTab29.Visible = false;
-            // 
-            // fileTab30
-            // 
-            this.fileTab30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab30.Location = new System.Drawing.Point(0, 1711);
-            this.fileTab30.Name = "fileTab30";
-            this.fileTab30.Size = new System.Drawing.Size(767, 59);
-            this.fileTab30.TabIndex = 29;
-            this.fileTab30.Visible = false;
-            // 
-            // fileTab31
-            // 
-            this.fileTab31.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab31.Location = new System.Drawing.Point(0, 1770);
-            this.fileTab31.Name = "fileTab31";
-            this.fileTab31.Size = new System.Drawing.Size(767, 59);
-            this.fileTab31.TabIndex = 30;
-            this.fileTab31.Visible = false;
-            // 
-            // fileTab32
-            // 
-            this.fileTab32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab32.Location = new System.Drawing.Point(0, 1829);
-            this.fileTab32.Name = "fileTab32";
-            this.fileTab32.Size = new System.Drawing.Size(767, 59);
-            this.fileTab32.TabIndex = 31;
-            this.fileTab32.Visible = false;
-            // 
-            // fileTab33
-            // 
-            this.fileTab33.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab33.Location = new System.Drawing.Point(0, 1888);
-            this.fileTab33.Name = "fileTab33";
-            this.fileTab33.Size = new System.Drawing.Size(767, 59);
-            this.fileTab33.TabIndex = 32;
-            this.fileTab33.Visible = false;
-            // 
-            // fileTab34
-            // 
-            this.fileTab34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab34.Location = new System.Drawing.Point(0, 1947);
-            this.fileTab34.Name = "fileTab34";
-            this.fileTab34.Size = new System.Drawing.Size(767, 59);
-            this.fileTab34.TabIndex = 33;
-            this.fileTab34.Visible = false;
-            // 
-            // fileTab35
-            // 
-            this.fileTab35.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab35.Location = new System.Drawing.Point(0, 2006);
-            this.fileTab35.Name = "fileTab35";
-            this.fileTab35.Size = new System.Drawing.Size(767, 59);
-            this.fileTab35.TabIndex = 34;
-            this.fileTab35.Visible = false;
-            // 
-            // fileTab36
-            // 
-            this.fileTab36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab36.Location = new System.Drawing.Point(0, 2065);
-            this.fileTab36.Name = "fileTab36";
-            this.fileTab36.Size = new System.Drawing.Size(767, 59);
-            this.fileTab36.TabIndex = 35;
-            this.fileTab36.Visible = false;
-            // 
-            // fileTab37
-            // 
-            this.fileTab37.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab37.Location = new System.Drawing.Point(0, 2124);
-            this.fileTab37.Name = "fileTab37";
-            this.fileTab37.Size = new System.Drawing.Size(767, 59);
-            this.fileTab37.TabIndex = 36;
-            this.fileTab37.Visible = false;
-            // 
-            // fileTab38
-            // 
-            this.fileTab38.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab38.Location = new System.Drawing.Point(0, 2183);
-            this.fileTab38.Name = "fileTab38";
-            this.fileTab38.Size = new System.Drawing.Size(767, 59);
-            this.fileTab38.TabIndex = 37;
-            this.fileTab38.Visible = false;
-            // 
-            // fileTab39
-            // 
-            this.fileTab39.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab39.Location = new System.Drawing.Point(0, 2242);
-            this.fileTab39.Name = "fileTab39";
-            this.fileTab39.Size = new System.Drawing.Size(767, 59);
-            this.fileTab39.TabIndex = 38;
-            this.fileTab39.Visible = false;
-            // 
-            // fileTab40
-            // 
-            this.fileTab40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab40.Location = new System.Drawing.Point(0, 2301);
-            this.fileTab40.Name = "fileTab40";
-            this.fileTab40.Size = new System.Drawing.Size(767, 59);
-            this.fileTab40.TabIndex = 39;
-            this.fileTab40.Visible = false;
-            // 
-            // fileTab41
-            // 
-            this.fileTab41.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab41.Location = new System.Drawing.Point(0, 2360);
-            this.fileTab41.Name = "fileTab41";
-            this.fileTab41.Size = new System.Drawing.Size(767, 59);
-            this.fileTab41.TabIndex = 40;
-            this.fileTab41.Visible = false;
-            // 
-            // fileTab42
-            // 
-            this.fileTab42.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab42.Location = new System.Drawing.Point(0, 2419);
-            this.fileTab42.Name = "fileTab42";
-            this.fileTab42.Size = new System.Drawing.Size(767, 59);
-            this.fileTab42.TabIndex = 41;
-            this.fileTab42.Visible = false;
-            // 
-            // fileTab43
-            // 
-            this.fileTab43.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab43.Location = new System.Drawing.Point(0, 2478);
-            this.fileTab43.Name = "fileTab43";
-            this.fileTab43.Size = new System.Drawing.Size(767, 59);
-            this.fileTab43.TabIndex = 42;
-            this.fileTab43.Visible = false;
-            // 
-            // fileTab44
-            // 
-            this.fileTab44.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab44.Location = new System.Drawing.Point(0, 2537);
-            this.fileTab44.Name = "fileTab44";
-            this.fileTab44.Size = new System.Drawing.Size(767, 59);
-            this.fileTab44.TabIndex = 43;
-            this.fileTab44.Visible = false;
-            // 
-            // fileTab45
-            // 
-            this.fileTab45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab45.Location = new System.Drawing.Point(0, 2596);
-            this.fileTab45.Name = "fileTab45";
-            this.fileTab45.Size = new System.Drawing.Size(767, 59);
-            this.fileTab45.TabIndex = 44;
-            this.fileTab45.Visible = false;
-            // 
-            // fileTab46
-            // 
-            this.fileTab46.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab46.Location = new System.Drawing.Point(0, 2655);
-            this.fileTab46.Name = "fileTab46";
-            this.fileTab46.Size = new System.Drawing.Size(767, 59);
-            this.fileTab46.TabIndex = 45;
-            this.fileTab46.Visible = false;
-            // 
-            // fileTab47
-            // 
-            this.fileTab47.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab47.Location = new System.Drawing.Point(0, 2714);
-            this.fileTab47.Name = "fileTab47";
-            this.fileTab47.Size = new System.Drawing.Size(767, 59);
-            this.fileTab47.TabIndex = 46;
-            this.fileTab47.Visible = false;
-            // 
-            // fileTab48
-            // 
-            this.fileTab48.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab48.Location = new System.Drawing.Point(0, 2773);
-            this.fileTab48.Name = "fileTab48";
-            this.fileTab48.Size = new System.Drawing.Size(767, 59);
-            this.fileTab48.TabIndex = 47;
-            this.fileTab48.Visible = false;
-            // 
-            // fileTab49
-            // 
-            this.fileTab49.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab49.Location = new System.Drawing.Point(0, 2832);
-            this.fileTab49.Name = "fileTab49";
-            this.fileTab49.Size = new System.Drawing.Size(767, 59);
-            this.fileTab49.TabIndex = 48;
-            this.fileTab49.Visible = false;
-            // 
-            // fileTab50
-            // 
-            this.fileTab50.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab50.Location = new System.Drawing.Point(0, 2891);
-            this.fileTab50.Name = "fileTab50";
-            this.fileTab50.Size = new System.Drawing.Size(767, 59);
-            this.fileTab50.TabIndex = 49;
-            this.fileTab50.Visible = false;
-            // 
-            // fileTab1
-            // 
-            this.fileTab1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileTab1.Location = new System.Drawing.Point(0, 0);
-            this.fileTab1.Name = "fileTab1";
-            this.fileTab1.Size = new System.Drawing.Size(767, 59);
-            this.fileTab1.TabIndex = 0;
-            this.fileTab1.Visible = false;
-            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -1046,6 +1052,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FileCrapper";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormDragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormDragEnter);
             this.listViewContextMenu.ResumeLayout(false);
             this.MenuPanel.ResumeLayout(false);
             this.MenuPanel.PerformLayout();

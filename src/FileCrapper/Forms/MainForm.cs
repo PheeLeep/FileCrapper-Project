@@ -50,7 +50,7 @@ namespace FileCrapper.Forms {
                         if (File.Exists(path)) {
                             FileObjectsHandler.AddItems(new string[] { path });
                         } else if (Directory.Exists(path)) {
-                            FileObjectsHandler.AddItemsFromDirectory(path, SettingsClass.SubfolderRecursion);
+                            FileObjectsHandler.AddItemsFromDirectory(path);
                         }
                     }
                     t = null;
@@ -189,7 +189,7 @@ namespace FileCrapper.Forms {
 
         private void addFromFolderToolStripMenuItem_Click(object sender, EventArgs e) {
             if (AddFolderDialog.ShowDialog() == DialogResult.OK)
-                FileObjectsHandler.AddItemsFromDirectory(AddFolderDialog.SelectedPath\);
+                FileObjectsHandler.AddItemsFromDirectory(AddFolderDialog.SelectedPath);
         }
 
         private void TickAllButton_Click(object sender, EventArgs e) {
@@ -268,6 +268,19 @@ namespace FileCrapper.Forms {
             c.CreateControl(); // Force to create form.
             FileObjectsHandler.StartFileCrapping();
             c.ShowDialog(this);
+        }
+
+        private void FormDragEnter(object sender, DragEventArgs e) {
+            e.Effect = (e.Data.GetDataPresent(DataFormats.FileDrop) && FileObjectsHandler.Status == FileObjectsHandler.StatusE.Ready) ? DragDropEffects.Move : DragDropEffects.None;
+        }
+
+        private void FormDragDrop(object sender, DragEventArgs e) {
+            try {
+                foreach (string s in (string[])e.Data.GetData(DataFormats.FileDrop))
+                    LoadPathToQueue(s);
+            } catch {
+                // Ignore.
+            }
         }
     }
 }
