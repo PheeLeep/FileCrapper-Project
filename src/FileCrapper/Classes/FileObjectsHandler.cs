@@ -355,9 +355,8 @@ namespace FileCrapper.Classes {
             }
 
             DebugProps.Print(DebugProps.PrintType.Debug, "Cleaning up...");
-            ThreadRemoveItems(guids.ToArray());
-
             avg /= objects.Count;
+            ThreadRemoveItems(guids.ToArray());
             FileCrappingSucceed?.Invoke(Math.Round(avg, 2), damageBytes);
             DebugProps.Print(DebugProps.PrintType.Info, "File crapping was finished. Ended at " + DateTime.Now.ToString("dd/MM/yy hh:mm:ss")
                              + " (Avg Damage Rate: " + Math.Round(avg, 2).ToString() + "% | Avg Bytes Damage: " + Miscellaneous.CalculateBytes(damageBytes) + ")");
